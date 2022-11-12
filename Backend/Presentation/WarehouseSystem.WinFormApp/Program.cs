@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WarehouseSystem.DAL;
+using WarehouseSystem.DAL.Interfaces;
+using WarehouseSystem.DAL.Repositories;
 
 namespace WarehouseSystem.WinFormApp
 {
@@ -45,8 +47,11 @@ namespace WarehouseSystem.WinFormApp
                 .ConfigureServices((context, services) => {
                     services.AddDbContext<WarehouseContext>(options =>
                     {
-                        options.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=WarehouseDb;Integrated Security=True;");
+                        options.UseSqlServer(@"data source=LAPTOP-9S2AK2B9;initial catalog=WarehouseDb;trusted_connection=true");
                     });
+
+                    services.AddScoped<IProductRepository, ProductRepository>();
+
                     services.AddTransient<Form1>();
                 });
         }
