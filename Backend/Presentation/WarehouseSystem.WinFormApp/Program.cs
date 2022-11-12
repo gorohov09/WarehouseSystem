@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WarehouseSystem.Application.Interfaces;
+using WarehouseSystem.Application.Services;
 using WarehouseSystem.DAL;
 using WarehouseSystem.DAL.Interfaces;
 using WarehouseSystem.DAL.Repositories;
@@ -24,14 +26,14 @@ namespace WarehouseSystem.WinFormApp
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
 
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
+            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<Form1>());
         }
         public static IServiceProvider ServiceProvider { get; private set; }
 
@@ -50,9 +52,12 @@ namespace WarehouseSystem.WinFormApp
                         options.UseSqlServer(@"data source=LAPTOP-9S2AK2B9;initial catalog=WarehouseDb;trusted_connection=true");
                     });
 
+                    //Repositories
                     services.AddScoped<IProductRepository, ProductRepository>();
-
                     services.AddScoped<IProductExemplarRepository, ProductExemplarRepository>();
+
+                    //Services
+                    services.AddScoped<IProductService, ProductService>();
 
                     services.AddTransient<Form1>();
                 });
