@@ -33,6 +33,12 @@ namespace WarehouseSystem.WinFormApp
         }
         public static IServiceProvider ServiceProvider { get; private set; }
 
+        //Damir
+        //@"data source=LAPTOP-9S2AK2B9;initial catalog=WarehouseDb;trusted_connection=true"
+
+        //Andrey
+        //@"Data Source=.\SQLEXPRESS;Initial Catalog=WarehouseDb;Integrated Security=True;"
+
         static IHostBuilder CreateHostBuilder()
         {
             return Host.CreateDefaultBuilder()
