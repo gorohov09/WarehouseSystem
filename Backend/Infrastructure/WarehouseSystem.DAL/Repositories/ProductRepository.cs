@@ -17,5 +17,10 @@ namespace WarehouseSystem.DAL.Repositories
             var products = _context.Products.ToList();
             return products;
         }
+        public Product GetProductBySKU(int productSKU)
+        {
+            var product = _context.Products.FirstOrDefault(prod => prod.ProductSKU == productSKU);
+            return product;
+        }
     }
 }
