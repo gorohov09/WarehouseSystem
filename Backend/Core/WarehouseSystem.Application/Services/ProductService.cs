@@ -13,6 +13,12 @@ namespace WarehouseSystem.Application.Services
             _productRepository = productRepository;
         }
 
+        public Product GetProductBySKU(int productSKU)
+        {
+            var product = _productRepository.GetProductBySKU(productSKU);
+            return product;
+        }
+
         public IEnumerable<Product> GetProducts()
         {
             var products = _productRepository.GetProducts();
