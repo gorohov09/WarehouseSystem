@@ -20,6 +20,6 @@ namespace WarehouseSystem.Application.DTO
 
         public bool IsCertificatePresent { get; set; }
 
-        public List<ProductExemplar> Exemplars { get; set; } = new List<ProductExemplar>(); //свойство навигации
+        public List<ProductExemplarDTO> ExemplarsDTO { get; set; } = new List<ProductExemplarDTO>(); //свойство навигации
     }
 }

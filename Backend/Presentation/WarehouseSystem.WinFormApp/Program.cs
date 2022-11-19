@@ -58,6 +58,7 @@ namespace WarehouseSystem.WinFormApp
 
                     //Services
                     services.AddScoped<IProductService, ProductService>();
+                    services.AddScoped<IProductExemplarService, ProductExemplarService>();
 
                     services.AddTransient<Form1>();
                 });

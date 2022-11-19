@@ -15,10 +15,28 @@ namespace WarehouseSystem.Application.Services
             _productRepository = productRepository;
         }
 
-        public Product GetProductBySKU(int productSKU)
+        public ProductDTO GetProductBySKU(int productSKU)
         {
             var product = _productRepository.GetProductBySKU(productSKU);
-            return product;
+            var productDTO = new ProductDTO
+            {
+                ProductSKU = product.ProductSKU,
+                Name = product.Name,
+                CityProd = product.CityProd,
+                DateProd = product.DateProd,
+                NumbOfCopies = product.NumbOfCopies,
+                PriceProd = product.PriceProd,
+                VendorNumber = product.VendorNumber,
+                IsCertificatePresent = product.IsCertificatePresent,
+                ExemplarsDTO = product.Exemplars.Select(exemplar => new ProductExemplarDTO
+                {
+                    Code = exemplar.Code,
+                    ProductSKU = exemplar.ProductSKU,
+                    RowNumber = exemplar.RowNumber,
+                    CellNumber = exemplar.CellNumber
+                }).ToList()
+            };
+            return productDTO;
         }
 
         public IEnumerable<ProductDTO> GetProducts()
@@ -34,7 +52,13 @@ namespace WarehouseSystem.Application.Services
                 PriceProd = product.PriceProd,
                 VendorNumber = product.VendorNumber,
                 IsCertificatePresent = product.IsCertificatePresent,
-                Exemplars = product.Exemplars.ToList()
+                ExemplarsDTO = product.Exemplars.Select(exemplar => new ProductExemplarDTO
+                {
+                    Code = exemplar.Code,
+                    ProductSKU = exemplar.ProductSKU,
+                    RowNumber = exemplar.RowNumber,
+                    CellNumber = exemplar.CellNumber
+                }).ToList()
             }) ;
             return productsDTO;
         }

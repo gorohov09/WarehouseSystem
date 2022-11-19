@@ -8,8 +8,6 @@ namespace WarehouseSystem.Application.DTO
 
         public int ProductSKU { get; set; }
 
-        public Product Product { get; set; }
-
         public int RowNumber { get; set; }
 
         public int CellNumber { get; set; }
