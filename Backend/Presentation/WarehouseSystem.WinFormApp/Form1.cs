@@ -1,28 +1,29 @@
+using WarehouseSystem.Application.Interfaces;
 using WarehouseSystem.DAL.Interfaces;
 
 namespace WarehouseSystem.WinFormApp
 {
     public partial class Form1 : Form
     {
-        private readonly IProductRepository _productRepository;
 
-        private readonly IProductExemplarRepository _productExemplarRepository;
+        private readonly IProductService _productService;
+        private readonly IProductExemplarService _productExemplarService;
 
-        public Form1(IProductRepository productRepository, IProductExemplarRepository productExemplarRepository)
+        public Form1(IProductService productService, IProductExemplarService productExemplarService)
         {
             InitializeComponent();
-            _productRepository = productRepository;
-            _productExemplarRepository = productExemplarRepository;
+            _productService = productService;
+            _productExemplarService = productExemplarService;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var products = _productRepository.GetProducts();
+            var products = _productService.GetProducts();
         }
 
         private void button_PER_test_Click(object sender, EventArgs e)
         {
-            var productsExemplars = _productExemplarRepository.GetProductExemplars();
+            var productsExemplars = _productExemplarService.GetProductExemplars();
         }
 
         private void textBox_inputSKU_TextChanged(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace WarehouseSystem.WinFormApp
         private void button_inputSKU_test_Click(object sender, EventArgs e)
         {
             var productSKU = int.Parse(textBox_inputSKU.Text);
-            var product = _productRepository.GetProductBySKU(productSKU);
+            var product = _productService.GetProductBySKU(productSKU);
         }
     }
 }
