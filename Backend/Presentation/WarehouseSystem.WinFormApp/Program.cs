@@ -6,6 +6,7 @@ using WarehouseSystem.Application.Services;
 using WarehouseSystem.DAL;
 using WarehouseSystem.DAL.Interfaces;
 using WarehouseSystem.DAL.Repositories;
+using WarehouseSystem.WinFormApp.Forms;
 
 namespace WarehouseSystem.WinFormApp
 {
@@ -61,6 +62,7 @@ namespace WarehouseSystem.WinFormApp
                     services.AddScoped<IProductExemplarService, ProductExemplarService>();
 
                     services.AddTransient<Form1>();
+                    services.AddTransient<FormProductDetails>();
                 });
         }
     }

@@ -1,5 +1,6 @@
 using WarehouseSystem.Application.Interfaces;
 using WarehouseSystem.DAL.Interfaces;
+using WarehouseSystem.WinFormApp.Forms;
 
 namespace WarehouseSystem.WinFormApp
 {
@@ -8,12 +9,14 @@ namespace WarehouseSystem.WinFormApp
 
         private readonly IProductService _productService;
         private readonly IProductExemplarService _productExemplarService;
+        private readonly FormProductDetails _formProductDetails;
 
-        public Form1(IProductService productService, IProductExemplarService productExemplarService)
+        public Form1(IProductService productService, IProductExemplarService productExemplarService, FormProductDetails formProductDetails)
         {
             InitializeComponent();
             _productService = productService;
             _productExemplarService = productExemplarService;
+            _formProductDetails = formProductDetails;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,7 +32,8 @@ namespace WarehouseSystem.WinFormApp
             //При клике на товар, мы будем открывать новое окно, где будет отображаться детальная информация по товару 
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                var obj = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                _formProductDetails.ProductId = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                _formProductDetails.ShowDialog();
             }
         }
     }
