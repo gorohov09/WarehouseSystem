@@ -22,7 +22,6 @@ namespace WarehouseSystem.Application.Services
             {
                 Code = productExemplar.Code,
                 ProductSKU = productExemplar.ProductSKU,
-                Product = productExemplar.Product,
                 RowNumber = productExemplar.RowNumber,
                 CellNumber = productExemplar.CellNumber
             }) ;

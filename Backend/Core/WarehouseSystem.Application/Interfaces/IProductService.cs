@@ -7,6 +7,6 @@ namespace WarehouseSystem.Application.Interfaces
     {
         IEnumerable<ProductDTO> GetProducts();
 
-        Product GetProductBySKU(int productSKU);
+        ProductDTO GetProductBySKU(int productSKU);
     }
 }
