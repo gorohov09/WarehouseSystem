@@ -16,25 +16,21 @@ namespace WarehouseSystem.WinFormApp
             _productExemplarService = productExemplarService;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            var products = _productService.GetProducts();
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = _productService.GetProducts().ToList();
         }
 
-        private void button_PER_test_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var productsExemplars = _productExemplarService.GetProductExemplars();
-        }
-
-        private void textBox_inputSKU_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_inputSKU_test_Click(object sender, EventArgs e)
-        {
-            var productSKU = int.Parse(textBox_inputSKU.Text);
-            var product = _productService.GetProductBySKU(productSKU);
+            //При клике на товар, мы будем открывать новое окно, где будет отображаться детальная информация по товару 
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                var obj = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            }
         }
     }
 }
