@@ -24,9 +24,7 @@ namespace WarehouseSystem.Application.Services
                 Name = product.Name,
                 CityProd = product.CityProd,
                 DateProd = product.DateProd,
-                NumbOfCopies = product.NumbOfCopies,
                 PriceProd = product.PriceProd,
-                VendorNumber = product.VendorNumber,
                 IsCertificatePresent = product.IsCertificatePresent,
                 ExemplarsDTO = product.Exemplars.Select(exemplar => new ProductExemplarDTO
                 {
@@ -48,9 +46,7 @@ namespace WarehouseSystem.Application.Services
                 Name = product.Name,
                 CityProd = product.CityProd,
                 DateProd = product.DateProd,
-                NumbOfCopies = product.NumbOfCopies,
                 PriceProd = product.PriceProd,
-                VendorNumber = product.VendorNumber,
                 IsCertificatePresent = product.IsCertificatePresent,
                 ExemplarsDTO = product.Exemplars.Select(exemplar => new ProductExemplarDTO
                 {

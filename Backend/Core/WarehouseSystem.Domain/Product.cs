@@ -15,15 +15,15 @@ namespace WarehouseSystem.Domain
 
         public DateTime DateProd { get; set; }
 
-        public int NumbOfCopies { get; set; }
-
         [Column(TypeName = "decimal(18, 2)")]
         public decimal PriceProd { get; set; }
-
-        public int VendorNumber { get; set; }
 
         public bool IsCertificatePresent { get; set; }
 
         public IEnumerable<ProductExemplar> Exemplars { get; set; } = new List<ProductExemplar>(); //свойство навигации 
+
+        public IEnumerable<Supply> Deliveries { get; set; } = new List<Supply>();
+
+        public IEnumerable<Supplier> Suppliers { get; set; } = new List<Supplier>();
     }
 }
