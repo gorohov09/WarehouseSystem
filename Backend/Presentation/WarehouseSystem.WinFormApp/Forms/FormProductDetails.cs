@@ -37,6 +37,9 @@ namespace WarehouseSystem.WinFormApp.Forms
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = productDetails.ExemplarsDTO;
+            dataGridView1.Columns[0].HeaderText = "";
+            dataGridView1.Columns[1].HeaderText = "";
+            dataGridView1.Columns[2].HeaderText = "";
         }
     }
 }
