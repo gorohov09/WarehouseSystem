@@ -26,9 +26,17 @@ namespace WarehouseSystem.WinFormApp.Forms
         private void FormProductDetails_Load(object sender, EventArgs e)
         {
             var productDetails = _productService.GetProductBySKU(ProductId);
-            label1.Text = productDetails.Name;
-            label2.Text = productDetails.CityProd;
-            label3.Text = productDetails.ProductSKU.ToString();
+            label14.Text = productDetails.ProductSKU.ToString();
+            label15.Text = productDetails.Name;
+            label16.Text = productDetails.CityProd;
+            label17.Text = productDetails.DateProd.ToShortDateString();
+            label18.Text = productDetails.PriceProd.ToString();
+            label20.Text = productDetails.NumbOfCopies.ToString();
+
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = productDetails.ExemplarsDTO;
         }
     }
 }
