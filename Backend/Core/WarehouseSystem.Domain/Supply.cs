@@ -16,5 +16,7 @@ namespace WarehouseSystem.Domain
 
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
+
+        public DateTime DeliveryDate { get; set; }
     }
 }
