@@ -108,8 +108,9 @@
             this.Controls.Add(this.button_AddProductAxemplar);
             this.Controls.Add(this.button_AddProduct);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.ShowIcon = false;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
