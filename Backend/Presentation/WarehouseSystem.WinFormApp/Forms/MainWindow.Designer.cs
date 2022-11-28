@@ -49,45 +49,50 @@
             // 
             // button_AddProduct
             // 
+            this.button_AddProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_AddProduct.Location = new System.Drawing.Point(429, 37);
             this.button_AddProduct.Name = "button_AddProduct";
-            this.button_AddProduct.Size = new System.Drawing.Size(170, 40);
+            this.button_AddProduct.Size = new System.Drawing.Size(187, 40);
             this.button_AddProduct.TabIndex = 1;
             this.button_AddProduct.Text = "Добавить товар";
             this.button_AddProduct.UseVisualStyleBackColor = true;
             // 
             // button_AddProductAxemplar
             // 
+            this.button_AddProductAxemplar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_AddProductAxemplar.Location = new System.Drawing.Point(429, 111);
             this.button_AddProductAxemplar.Name = "button_AddProductAxemplar";
-            this.button_AddProductAxemplar.Size = new System.Drawing.Size(170, 40);
+            this.button_AddProductAxemplar.Size = new System.Drawing.Size(187, 40);
             this.button_AddProductAxemplar.TabIndex = 2;
             this.button_AddProductAxemplar.Text = "Добавить экземпляр";
             this.button_AddProductAxemplar.UseVisualStyleBackColor = true;
             // 
             // button_IssueProduct
             // 
+            this.button_IssueProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_IssueProduct.Location = new System.Drawing.Point(429, 186);
             this.button_IssueProduct.Name = "button_IssueProduct";
-            this.button_IssueProduct.Size = new System.Drawing.Size(170, 40);
+            this.button_IssueProduct.Size = new System.Drawing.Size(187, 40);
             this.button_IssueProduct.TabIndex = 3;
             this.button_IssueProduct.Text = "Выдать товар";
             this.button_IssueProduct.UseVisualStyleBackColor = true;
             // 
             // button_DeleteProduct
             // 
+            this.button_DeleteProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_DeleteProduct.Location = new System.Drawing.Point(429, 264);
             this.button_DeleteProduct.Name = "button_DeleteProduct";
-            this.button_DeleteProduct.Size = new System.Drawing.Size(170, 40);
+            this.button_DeleteProduct.Size = new System.Drawing.Size(187, 40);
             this.button_DeleteProduct.TabIndex = 4;
             this.button_DeleteProduct.Text = "Удалить товар";
             this.button_DeleteProduct.UseVisualStyleBackColor = true;
             // 
             // button_Exit
             // 
+            this.button_Exit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Exit.Location = new System.Drawing.Point(429, 420);
             this.button_Exit.Name = "button_Exit";
-            this.button_Exit.Size = new System.Drawing.Size(170, 40);
+            this.button_Exit.Size = new System.Drawing.Size(187, 40);
             this.button_Exit.TabIndex = 5;
             this.button_Exit.Text = "Выйти";
             this.button_Exit.UseVisualStyleBackColor = true;
