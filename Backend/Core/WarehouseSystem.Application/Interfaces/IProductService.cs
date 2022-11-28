@@ -1,12 +1,11 @@
-﻿using WarehouseSystem.Application.DTO;
-using WarehouseSystem.Domain;
+﻿using WarehouseSystem.Application.BO;
 
 namespace WarehouseSystem.Application.Interfaces
 {
     public interface IProductService
     {
-        IEnumerable<ProductDTO> GetProducts();
+        IEnumerable<ProductBO> GetProducts();
 
-        ProductDTO GetProductBySKU(int productSKU);
+        ProductBO GetProductBySKU(int productSKU);
     }
 }

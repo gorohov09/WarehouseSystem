@@ -1,8 +1,7 @@
 ﻿using System.Linq;
-using WarehouseSystem.Application.DTO;
+using WarehouseSystem.Application.BO;
 using WarehouseSystem.Application.Interfaces;
 using WarehouseSystem.DAL.Interfaces;
-using WarehouseSystem.Domain;
 
 namespace WarehouseSystem.Application.Services
 {
@@ -15,10 +14,10 @@ namespace WarehouseSystem.Application.Services
             _productExemplarRepository = productExemplarRepository;
         }
     
-        public IEnumerable<ProductExemplarDTO> GetProductExemplars()
+        public IEnumerable<ProductExemplarBO> GetProductExemplars()
         {
             var productsExemplar = _productExemplarRepository.GetProductExemplars();
-            var productsExemplarDTO = productsExemplar.Select(productExemplar => new ProductExemplarDTO
+            var productsExemplarDTO = productsExemplar.Select(productExemplar => new ProductExemplarBO
             {
                 Code = productExemplar.Code,
                 ProductSKU = productExemplar.ProductSKU,

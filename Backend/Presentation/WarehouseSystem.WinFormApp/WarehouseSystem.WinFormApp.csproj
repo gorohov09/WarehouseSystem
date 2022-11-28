@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\WarehouseSystem.Application\WarehouseSystem.Application.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\WarehouseSystem.DAL\WarehouseSystem.DAL.csproj" />
+    <ProjectReference Include="..\..\DAL\WarehouseSystem.DAL\WarehouseSystem.DAL.csproj" />
   </ItemGroup>
 
 </Project>

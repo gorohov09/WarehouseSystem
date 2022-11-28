@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarehouseSystem.DAL;
 
@@ -11,9 +12,10 @@ using WarehouseSystem.DAL;
 namespace WarehouseSystem.DAL.Migrations
 {
     [DbContext(typeof(WarehouseContext))]
-    partial class WarehouseContextModelSnapshot : ModelSnapshot
+    [Migration("20221126130607_AddNewTable")]
+    partial class AddNewTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,14 +46,8 @@ namespace WarehouseSystem.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NumbOfCopies")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("PriceProd")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("VendorNumber")
-                        .HasColumnType("int");
 
                     b.HasKey("ProductSKU");
 
@@ -82,6 +78,46 @@ namespace WarehouseSystem.DAL.Migrations
                     b.ToTable("ProductExemplars");
                 });
 
+            modelBuilder.Entity("WarehouseSystem.Domain.Supplier", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Suppliers");
+                });
+
+            modelBuilder.Entity("WarehouseSystem.Domain.Supply", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "SupplierId");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("Deliveries", (string)null);
+                });
+
             modelBuilder.Entity("WarehouseSystem.Domain.ProductExemplar", b =>
                 {
                     b.HasOne("WarehouseSystem.Domain.Product", "Product")
@@ -93,9 +129,35 @@ namespace WarehouseSystem.DAL.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("WarehouseSystem.Domain.Supply", b =>
+                {
+                    b.HasOne("WarehouseSystem.Domain.Product", "Product")
+                        .WithMany("Deliveries")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WarehouseSystem.Domain.Supplier", "Supplier")
+                        .WithMany("Deliveries")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("WarehouseSystem.Domain.Product", b =>
                 {
+                    b.Navigation("Deliveries");
+
                     b.Navigation("Exemplars");
+                });
+
+            modelBuilder.Entity("WarehouseSystem.Domain.Supplier", b =>
+                {
+                    b.Navigation("Deliveries");
                 });
 #pragma warning restore 612, 618
         }

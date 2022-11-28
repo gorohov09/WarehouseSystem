@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WarehouseSystem.Domain
+namespace WarehouseSystem.DAL.Models
 {
     public class Product
     {
@@ -9,6 +9,7 @@ namespace WarehouseSystem.Domain
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductSKU { get; set; }
 
+        [MaxLength(100)]
         public string Name { get; set; }
 
         public string CityProd { get; set; }

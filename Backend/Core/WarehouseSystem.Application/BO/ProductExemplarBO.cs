@@ -1,8 +1,6 @@
-﻿using WarehouseSystem.Domain;
-
-namespace WarehouseSystem.Application.DTO
+﻿namespace WarehouseSystem.Application.BO
 {
-    public class ProductExemplarDTO
+    public class ProductExemplarBO
     {
         public int Code { get; set; }
 
