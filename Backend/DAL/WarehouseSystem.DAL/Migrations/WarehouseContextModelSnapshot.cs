@@ -22,7 +22,7 @@ namespace WarehouseSystem.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Product", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Product", b =>
                 {
                     b.Property<int>("ProductSKU")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,8 @@ namespace WarehouseSystem.DAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("PriceProd")
                         .HasColumnType("decimal(18,2)");
@@ -52,7 +53,7 @@ namespace WarehouseSystem.DAL.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.ProductExemplar", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.ProductExemplar", b =>
                 {
                     b.Property<int>("Code")
                         .ValueGeneratedOnAdd()
@@ -76,7 +77,7 @@ namespace WarehouseSystem.DAL.Migrations
                     b.ToTable("ProductExemplars");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Supplier", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Supplier", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,7 +102,7 @@ namespace WarehouseSystem.DAL.Migrations
                     b.ToTable("Suppliers");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Supply", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Supply", b =>
                 {
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -119,9 +120,9 @@ namespace WarehouseSystem.DAL.Migrations
                     b.ToTable("Deliveries", (string)null);
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.ProductExemplar", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.ProductExemplar", b =>
                 {
-                    b.HasOne("WarehouseSystem.Domain.Product", "Product")
+                    b.HasOne("WarehouseSystem.DAL.Models.Product", "Product")
                         .WithMany("Exemplars")
                         .HasForeignKey("ProductSKU")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -130,15 +131,15 @@ namespace WarehouseSystem.DAL.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Supply", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Supply", b =>
                 {
-                    b.HasOne("WarehouseSystem.Domain.Product", "Product")
+                    b.HasOne("WarehouseSystem.DAL.Models.Product", "Product")
                         .WithMany("Deliveries")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WarehouseSystem.Domain.Supplier", "Supplier")
+                    b.HasOne("WarehouseSystem.DAL.Models.Supplier", "Supplier")
                         .WithMany("Deliveries")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -149,14 +150,14 @@ namespace WarehouseSystem.DAL.Migrations
                     b.Navigation("Supplier");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Product", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Product", b =>
                 {
                     b.Navigation("Deliveries");
 
                     b.Navigation("Exemplars");
                 });
 
-            modelBuilder.Entity("WarehouseSystem.Domain.Supplier", b =>
+            modelBuilder.Entity("WarehouseSystem.DAL.Models.Supplier", b =>
                 {
                     b.Navigation("Deliveries");
                 });

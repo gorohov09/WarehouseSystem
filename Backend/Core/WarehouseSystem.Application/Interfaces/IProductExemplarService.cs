@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WarehouseSystem.Application.DTO;
-using WarehouseSystem.Domain;
+using WarehouseSystem.Application.BO;
 
 namespace WarehouseSystem.Application.Interfaces
 {
     public interface IProductExemplarService
     {
-        IEnumerable<ProductExemplarDTO> GetProductExemplars();
+        IEnumerable<ProductExemplarBO> GetProductExemplars();
     }
 }

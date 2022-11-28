@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WarehouseSystem.DAL.Interfaces;
-using WarehouseSystem.Domain;
+using WarehouseSystem.DAL.Models;
 
 namespace WarehouseSystem.DAL.Repositories
 {

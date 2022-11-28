@@ -25,21 +25,21 @@ namespace WarehouseSystem.WinFormApp.Forms
 
         private void FormProductDetails_Load(object sender, EventArgs e)
         {
-            var productDetails = _productService.GetProductBySKU(ProductId);
-            label14.Text = productDetails.ProductSKU.ToString();
-            label15.Text = productDetails.Name;
-            label16.Text = productDetails.CityProd;
-            label17.Text = productDetails.DateProd.ToShortDateString();
-            label18.Text = productDetails.PriceProd.ToString();
-            label20.Text = productDetails.NumbOfCopies.ToString();
+            //var productDetails = _productService.GetProductBySKU(ProductId);
+            //label14.Text = productDetails.ProductSKU.ToString();
+            //label15.Text = productDetails.Name;
+            //label16.Text = productDetails.CityProd;
+            //label17.Text = productDetails.DateProd.ToShortDateString();
+            //label18.Text = productDetails.PriceProd.ToString();
+            //label20.Text = productDetails.NumbOfCopies.ToString();
 
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.ReadOnly = true;
-            dataGridView1.DataSource = productDetails.ExemplarsDTO;
-            dataGridView1.Columns[0].HeaderText = "";
-            dataGridView1.Columns[1].HeaderText = "";
-            dataGridView1.Columns[2].HeaderText = "";
+            //dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dataGridView1.AllowUserToAddRows = false;
+            //dataGridView1.ReadOnly = true;
+            //dataGridView1.DataSource = productDetails.ExemplarsDTO;
+            //dataGridView1.Columns[0].HeaderText = "";
+            //dataGridView1.Columns[1].HeaderText = "";
+            //dataGridView1.Columns[2].HeaderText = "";
         }
     }
 }

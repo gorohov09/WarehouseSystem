@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using WarehouseSystem.Application.DTO;
+﻿using WarehouseSystem.Application.BO;
 using WarehouseSystem.Application.Interfaces;
 using WarehouseSystem.DAL.Interfaces;
-using WarehouseSystem.Domain;
 
 namespace WarehouseSystem.Application.Services
 {
@@ -15,16 +13,16 @@ namespace WarehouseSystem.Application.Services
             _productRepository = productRepository;
         }
 
-        public ProductDTO GetProductBySKU(int productSKU)
+        public ProductBO GetProductBySKU(int productSKU)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProductDTO> GetProducts()
+        public IEnumerable<ProductBO> GetProducts()
         {
             var products = _productRepository.GetProducts();
 
-            var productsDTO = products.Select(product => new ProductDTO
+            var productsDTO = products.Select(product => new ProductBO
             {
                 Name = product.Name,
                 PriceProd = product.PriceProd,

@@ -1,5 +1,4 @@
 using WarehouseSystem.Application.Interfaces;
-using WarehouseSystem.DAL.Interfaces;
 using WarehouseSystem.WinFormApp.Forms;
 
 namespace WarehouseSystem.WinFormApp
