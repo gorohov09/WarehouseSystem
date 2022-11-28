@@ -34,7 +34,7 @@ namespace WarehouseSystem.WinFormApp
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<>());
+            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<MainWindow>());
         }
         public static IServiceProvider ServiceProvider { get; private set; }
 
