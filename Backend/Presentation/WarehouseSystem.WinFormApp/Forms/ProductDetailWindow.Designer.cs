@@ -52,11 +52,11 @@
             // 
             this.dataGridView_ProductDetail.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView_ProductDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ProductDetail.Location = new System.Drawing.Point(418, 12);
+            this.dataGridView_ProductDetail.Location = new System.Drawing.Point(383, 12);
             this.dataGridView_ProductDetail.Name = "dataGridView_ProductDetail";
             this.dataGridView_ProductDetail.RowHeadersWidth = 51;
             this.dataGridView_ProductDetail.RowTemplate.Height = 29;
-            this.dataGridView_ProductDetail.Size = new System.Drawing.Size(272, 309);
+            this.dataGridView_ProductDetail.Size = new System.Drawing.Size(481, 309);
             this.dataGridView_ProductDetail.TabIndex = 0;
             // 
             // label_ProductDetail_ProductSKU
@@ -177,7 +177,7 @@
             // label_ProductDetail_VendorNumber_Output
             // 
             this.label_ProductDetail_VendorNumber_Output.AutoSize = true;
-            this.label_ProductDetail_VendorNumber_Output.Location = new System.Drawing.Point(192, 239);
+            this.label_ProductDetail_VendorNumber_Output.Location = new System.Drawing.Point(153, 240);
             this.label_ProductDetail_VendorNumber_Output.Name = "label_ProductDetail_VendorNumber_Output";
             this.label_ProductDetail_VendorNumber_Output.Size = new System.Drawing.Size(42, 20);
             this.label_ProductDetail_VendorNumber_Output.TabIndex = 14;
@@ -189,9 +189,9 @@
             this.label_ProductDetail_VendorNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_ProductDetail_VendorNumber.Location = new System.Drawing.Point(16, 237);
             this.label_ProductDetail_VendorNumber.Name = "label_ProductDetail_VendorNumber";
-            this.label_ProductDetail_VendorNumber.Size = new System.Drawing.Size(170, 23);
+            this.label_ProductDetail_VendorNumber.Size = new System.Drawing.Size(114, 23);
             this.label_ProductDetail_VendorNumber.TabIndex = 13;
-            this.label_ProductDetail_VendorNumber.Text = "Номер поставщика:";
+            this.label_ProductDetail_VendorNumber.Text = "Поставщики:";
             // 
             // label_ProductDetail_IsCertificatePresent_Output
             // 
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 433);
+            this.ClientSize = new System.Drawing.Size(876, 433);
             this.Controls.Add(this.label_ProductDetail_IsCertificatePresent_Output);
             this.Controls.Add(this.label_ProductDetail_IsCertificatePresent);
             this.Controls.Add(this.label_ProductDetail_VendorNumber_Output);
@@ -237,6 +237,7 @@
             this.MaximizeBox = false;
             this.Name = "ProductDetailWindow";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.ProductDetailWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ProductDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

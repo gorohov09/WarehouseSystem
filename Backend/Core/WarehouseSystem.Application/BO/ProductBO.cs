@@ -2,6 +2,8 @@
 {
     public class ProductBO
     {
+        public int ProductSKU { get; set; }
+
         public string Name { get; set; }
 
         public decimal PriceProd { get; set; }

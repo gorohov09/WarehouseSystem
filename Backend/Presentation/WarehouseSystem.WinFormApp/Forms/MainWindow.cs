@@ -1,20 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using WarehouseSystem.Application.Interfaces;
 
 namespace WarehouseSystem.WinFormApp.Forms
 {
     public partial class MainWindow : Form
     {
-        public MainWindow()
+        private readonly IProductService _productService;
+        private readonly ProductDetailWindow _productDetailWindow;
+
+        public MainWindow(IProductService productService, ProductDetailWindow productDetailWindow)
         {
+            _productService = productService;
+            _productDetailWindow = productDetailWindow;
             InitializeComponent();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = _productService.GetProducts().ToList();
+            dataGridView1.Columns[0].HeaderText = "Артикул";
+            dataGridView1.Columns[1].HeaderText = "Название";
+            dataGridView1.Columns[2].HeaderText = "Цена";
+            dataGridView1.Columns[3].HeaderText = "Колличество";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                var obj = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                _productDetailWindow.ProductId = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                _productDetailWindow.ShowDialog();
+            }
         }
     }
 }

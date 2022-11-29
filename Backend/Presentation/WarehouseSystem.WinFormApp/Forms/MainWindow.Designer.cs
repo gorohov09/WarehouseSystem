@@ -46,13 +46,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(300, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 423);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button_AddProduct
             // 
             this.button_AddProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_AddProduct.Location = new System.Drawing.Point(429, 37);
+            this.button_AddProduct.Location = new System.Drawing.Point(602, 37);
             this.button_AddProduct.Name = "button_AddProduct";
             this.button_AddProduct.Size = new System.Drawing.Size(187, 40);
             this.button_AddProduct.TabIndex = 1;
@@ -62,7 +63,7 @@
             // button_AddProductAxemplar
             // 
             this.button_AddProductAxemplar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_AddProductAxemplar.Location = new System.Drawing.Point(429, 111);
+            this.button_AddProductAxemplar.Location = new System.Drawing.Point(602, 105);
             this.button_AddProductAxemplar.Name = "button_AddProductAxemplar";
             this.button_AddProductAxemplar.Size = new System.Drawing.Size(187, 40);
             this.button_AddProductAxemplar.TabIndex = 2;
@@ -72,7 +73,7 @@
             // button_IssueProduct
             // 
             this.button_IssueProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_IssueProduct.Location = new System.Drawing.Point(429, 186);
+            this.button_IssueProduct.Location = new System.Drawing.Point(602, 176);
             this.button_IssueProduct.Name = "button_IssueProduct";
             this.button_IssueProduct.Size = new System.Drawing.Size(187, 40);
             this.button_IssueProduct.TabIndex = 3;
@@ -82,7 +83,7 @@
             // button_DeleteProduct
             // 
             this.button_DeleteProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_DeleteProduct.Location = new System.Drawing.Point(429, 264);
+            this.button_DeleteProduct.Location = new System.Drawing.Point(602, 253);
             this.button_DeleteProduct.Name = "button_DeleteProduct";
             this.button_DeleteProduct.Size = new System.Drawing.Size(187, 40);
             this.button_DeleteProduct.TabIndex = 4;
@@ -92,7 +93,7 @@
             // button_Exit
             // 
             this.button_Exit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Exit.Location = new System.Drawing.Point(429, 420);
+            this.button_Exit.Location = new System.Drawing.Point(602, 405);
             this.button_Exit.Name = "button_Exit";
             this.button_Exit.Size = new System.Drawing.Size(187, 40);
             this.button_Exit.TabIndex = 5;
@@ -103,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 493);
+            this.ClientSize = new System.Drawing.Size(846, 493);
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.button_DeleteProduct);
             this.Controls.Add(this.button_IssueProduct);
@@ -113,6 +114,7 @@
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

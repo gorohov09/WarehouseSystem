@@ -61,7 +61,8 @@ namespace WarehouseSystem.WinFormApp
                     services.AddScoped<IProductService, ProductService>();
                     services.AddScoped<IProductExemplarService, ProductExemplarService>();
 
-                    
+                    services.AddTransient<MainWindow>();
+                    services.AddTransient<ProductDetailWindow>();
                 });
         }
     }
