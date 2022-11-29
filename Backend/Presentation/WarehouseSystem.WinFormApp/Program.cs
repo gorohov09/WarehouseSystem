@@ -55,14 +55,13 @@ namespace WarehouseSystem.WinFormApp
 
                     //Repositories
                     services.AddScoped<IProductRepository, ProductRepository>();
-                    services.AddScoped<IProductExemplarRepository, ProductExemplarRepository>();
 
                     //Services
                     services.AddScoped<IProductService, ProductService>();
-                    services.AddScoped<IProductExemplarService, ProductExemplarService>();
 
                     services.AddTransient<MainWindow>();
                     services.AddTransient<ProductDetailWindow>();
+                    services.AddTransient<ProductReceiveWindow>();
                 });
         }
     }

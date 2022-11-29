@@ -7,5 +7,9 @@ namespace WarehouseSystem.DAL.Interfaces
         IEnumerable<Product> GetProducts();
 
         Product GetProductBySKU(int productSKU);
+
+        Supplier GetSupplierById(int id);
+
+        bool Save<T>(T product);
     }
 }

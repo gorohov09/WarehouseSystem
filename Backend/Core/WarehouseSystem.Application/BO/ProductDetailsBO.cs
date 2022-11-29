@@ -8,7 +8,7 @@
 
         public string CityProd { get; set; }
 
-        public DateTime DateProd { get; set; }
+        public string DateProd { get; set; }
 
         public int Count { get; set; }
 

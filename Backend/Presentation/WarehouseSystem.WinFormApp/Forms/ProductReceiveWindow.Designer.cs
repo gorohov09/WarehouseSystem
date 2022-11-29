@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label_ProductReceive_ProductSKU = new System.Windows.Forms.Label();
-            this.textBox_ProductReceive_ProcductSKU_Input = new System.Windows.Forms.TextBox();
             this.textBox_ProductReceive_Name_Input = new System.Windows.Forms.TextBox();
             this.label_ProductReceive_Name = new System.Windows.Forms.Label();
             this.textBox_ProductReceive_CityProd_Input = new System.Windows.Forms.TextBox();
@@ -55,20 +54,12 @@
             this.label_ProductReceive_ProductSKU.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_ProductReceive_ProductSKU.Location = new System.Drawing.Point(41, 9);
             this.label_ProductReceive_ProductSKU.Name = "label_ProductReceive_ProductSKU";
-            this.label_ProductReceive_ProductSKU.Size = new System.Drawing.Size(75, 23);
+            this.label_ProductReceive_ProductSKU.Size = new System.Drawing.Size(0, 23);
             this.label_ProductReceive_ProductSKU.TabIndex = 0;
-            this.label_ProductReceive_ProductSKU.Text = "Артикул";
-            // 
-            // textBox_ProductReceive_ProcductSKU_Input
-            // 
-            this.textBox_ProductReceive_ProcductSKU_Input.Location = new System.Drawing.Point(31, 35);
-            this.textBox_ProductReceive_ProcductSKU_Input.Name = "textBox_ProductReceive_ProcductSKU_Input";
-            this.textBox_ProductReceive_ProcductSKU_Input.Size = new System.Drawing.Size(260, 27);
-            this.textBox_ProductReceive_ProcductSKU_Input.TabIndex = 1;
             // 
             // textBox_ProductReceive_Name_Input
             // 
-            this.textBox_ProductReceive_Name_Input.Location = new System.Drawing.Point(31, 91);
+            this.textBox_ProductReceive_Name_Input.Location = new System.Drawing.Point(31, 35);
             this.textBox_ProductReceive_Name_Input.Name = "textBox_ProductReceive_Name_Input";
             this.textBox_ProductReceive_Name_Input.Size = new System.Drawing.Size(260, 27);
             this.textBox_ProductReceive_Name_Input.TabIndex = 3;
@@ -77,7 +68,7 @@
             // 
             this.label_ProductReceive_Name.AutoSize = true;
             this.label_ProductReceive_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductReceive_Name.Location = new System.Drawing.Point(41, 65);
+            this.label_ProductReceive_Name.Location = new System.Drawing.Point(31, 9);
             this.label_ProductReceive_Name.Name = "label_ProductReceive_Name";
             this.label_ProductReceive_Name.Size = new System.Drawing.Size(131, 23);
             this.label_ProductReceive_Name.TabIndex = 2;
@@ -85,7 +76,7 @@
             // 
             // textBox_ProductReceive_CityProd_Input
             // 
-            this.textBox_ProductReceive_CityProd_Input.Location = new System.Drawing.Point(31, 151);
+            this.textBox_ProductReceive_CityProd_Input.Location = new System.Drawing.Point(31, 91);
             this.textBox_ProductReceive_CityProd_Input.Name = "textBox_ProductReceive_CityProd_Input";
             this.textBox_ProductReceive_CityProd_Input.Size = new System.Drawing.Size(260, 27);
             this.textBox_ProductReceive_CityProd_Input.TabIndex = 5;
@@ -94,7 +85,7 @@
             // 
             this.label_ProductReceive_CityProd.AutoSize = true;
             this.label_ProductReceive_CityProd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductReceive_CityProd.Location = new System.Drawing.Point(41, 121);
+            this.label_ProductReceive_CityProd.Location = new System.Drawing.Point(31, 65);
             this.label_ProductReceive_CityProd.Name = "label_ProductReceive_CityProd";
             this.label_ProductReceive_CityProd.Size = new System.Drawing.Size(175, 23);
             this.label_ProductReceive_CityProd.TabIndex = 4;
@@ -102,7 +93,7 @@
             // 
             // textBox_ProductReceive_DateProd_Input
             // 
-            this.textBox_ProductReceive_DateProd_Input.Location = new System.Drawing.Point(31, 211);
+            this.textBox_ProductReceive_DateProd_Input.Location = new System.Drawing.Point(31, 148);
             this.textBox_ProductReceive_DateProd_Input.Name = "textBox_ProductReceive_DateProd_Input";
             this.textBox_ProductReceive_DateProd_Input.Size = new System.Drawing.Size(260, 27);
             this.textBox_ProductReceive_DateProd_Input.TabIndex = 7;
@@ -111,7 +102,7 @@
             // 
             this.label_ProductReceive_DateProd.AutoSize = true;
             this.label_ProductReceive_DateProd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductReceive_DateProd.Location = new System.Drawing.Point(41, 185);
+            this.label_ProductReceive_DateProd.Location = new System.Drawing.Point(31, 122);
             this.label_ProductReceive_DateProd.Name = "label_ProductReceive_DateProd";
             this.label_ProductReceive_DateProd.Size = new System.Drawing.Size(166, 23);
             this.label_ProductReceive_DateProd.TabIndex = 6;
@@ -209,8 +200,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 40);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Добавить товар";
+            this.button1.Text = "Получить товар";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProductReceiveWindow
             // 
@@ -231,7 +223,6 @@
             this.Controls.Add(this.label_ProductReceive_CityProd);
             this.Controls.Add(this.textBox_ProductReceive_Name_Input);
             this.Controls.Add(this.label_ProductReceive_Name);
-            this.Controls.Add(this.textBox_ProductReceive_ProcductSKU_Input);
             this.Controls.Add(this.label_ProductReceive_ProductSKU);
             this.Name = "ProductReceiveWindow";
             this.Text = "ProductReceiveWindow";
@@ -245,7 +236,6 @@
         #endregion
 
         private Label label_ProductReceive_ProductSKU;
-        private TextBox textBox_ProductReceive_ProcductSKU_Input;
         private TextBox textBox_ProductReceive_Name_Input;
         private Label label_ProductReceive_Name;
         private TextBox textBox_ProductReceive_CityProd_Input;

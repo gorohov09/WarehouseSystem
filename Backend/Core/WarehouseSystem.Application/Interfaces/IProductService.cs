@@ -7,5 +7,7 @@ namespace WarehouseSystem.Application.Interfaces
         IEnumerable<ProductBO> GetProducts();
 
         ProductDetailsBO GetProductBySKU(int productSKU);
+
+        bool AddProduct(string name, string city, string dateProud, int count, decimal price, int numberSupplier, bool isCertificat);
     }
 }

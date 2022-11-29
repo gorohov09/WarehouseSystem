@@ -31,5 +31,19 @@ namespace WarehouseSystem.DAL.Repositories
 
             return product;
         }
+
+        public Supplier GetSupplierById(int id)
+        {
+            return _context.Suppliers.FirstOrDefault(x => x.Id == id);
+        }
+
+        public bool Save<T>(T product)
+        {
+            if (product == null)
+                return false;
+
+            _context.Add(product);
+            return _context.SaveChanges() > 0 ? true : false;
+        }
     }
 }
