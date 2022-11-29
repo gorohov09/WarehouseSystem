@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_AddProduct = new System.Windows.Forms.Button();
             this.button_AddProductAxemplar = new System.Windows.Forms.Button();
             this.button_IssueProduct = new System.Windows.Forms.Button();
-            this.button_DeleteProduct = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -50,16 +48,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(546, 385);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // button_AddProduct
-            // 
-            this.button_AddProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_AddProduct.Location = new System.Drawing.Point(602, 37);
-            this.button_AddProduct.Name = "button_AddProduct";
-            this.button_AddProduct.Size = new System.Drawing.Size(187, 40);
-            this.button_AddProduct.TabIndex = 1;
-            this.button_AddProduct.Text = "Добавить товар";
-            this.button_AddProduct.UseVisualStyleBackColor = true;
             // 
             // button_AddProductAxemplar
             // 
@@ -81,16 +69,7 @@
             this.button_IssueProduct.TabIndex = 3;
             this.button_IssueProduct.Text = "Выдать товар";
             this.button_IssueProduct.UseVisualStyleBackColor = true;
-            // 
-            // button_DeleteProduct
-            // 
-            this.button_DeleteProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_DeleteProduct.Location = new System.Drawing.Point(602, 253);
-            this.button_DeleteProduct.Name = "button_DeleteProduct";
-            this.button_DeleteProduct.Size = new System.Drawing.Size(187, 40);
-            this.button_DeleteProduct.TabIndex = 4;
-            this.button_DeleteProduct.Text = "Удалить товар";
-            this.button_DeleteProduct.UseVisualStyleBackColor = true;
+            this.button_IssueProduct.Click += new System.EventHandler(this.button_IssueProduct_Click);
             // 
             // button_Exit
             // 
@@ -119,10 +98,8 @@
             this.ClientSize = new System.Drawing.Size(846, 493);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Exit);
-            this.Controls.Add(this.button_DeleteProduct);
             this.Controls.Add(this.button_IssueProduct);
             this.Controls.Add(this.button_AddProductAxemplar);
-            this.Controls.Add(this.button_AddProduct);
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.Name = "MainWindow";
@@ -136,10 +113,8 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button_AddProduct;
         private Button button_AddProductAxemplar;
         private Button button_IssueProduct;
-        private Button button_DeleteProduct;
         private Button button_Exit;
         private Button button1;
     }

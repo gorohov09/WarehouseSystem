@@ -11,5 +11,7 @@ namespace WarehouseSystem.DAL.Interfaces
         Supplier GetSupplierById(int id);
 
         bool Save<T>(T product);
+
+        bool Delete<T>(T product);
     }
 }

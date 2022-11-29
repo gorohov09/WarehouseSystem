@@ -7,13 +7,15 @@ namespace WarehouseSystem.WinFormApp.Forms
         private readonly IProductService _productService;
         private readonly ProductDetailWindow _productDetailWindow;
         private readonly ProductReceiveWindow _productReceiveWindow;
+        private readonly ProductsIssueWindow _productsIssueWindow;
 
         public MainWindow(IProductService productService, ProductDetailWindow productDetailWindow, 
-            ProductReceiveWindow productReceiveWindow)
+            ProductReceiveWindow productReceiveWindow, ProductsIssueWindow productsIssueWindow)
         {
             _productService = productService;
             _productDetailWindow = productDetailWindow;
             _productReceiveWindow = productReceiveWindow;
+            _productsIssueWindow = productsIssueWindow;
             InitializeComponent();
         }
 
@@ -42,6 +44,11 @@ namespace WarehouseSystem.WinFormApp.Forms
         private void button_AddProductAxemplar_Click(object sender, EventArgs e)
         {
             _productReceiveWindow.ShowDialog();
+        }
+
+        private void button_IssueProduct_Click(object sender, EventArgs e)
+        {
+            _productsIssueWindow.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

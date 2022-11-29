@@ -9,5 +9,7 @@ namespace WarehouseSystem.Application.Interfaces
         ProductDetailsBO GetProductBySKU(int productSKU);
 
         bool AddProduct(string name, string city, string dateProud, int count, decimal price, int numberSupplier, bool isCertificat);
+
+        bool IssueProduct(int productSKU, int count);
     }
 }

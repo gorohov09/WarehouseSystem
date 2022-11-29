@@ -45,5 +45,14 @@ namespace WarehouseSystem.DAL.Repositories
             _context.Add(product);
             return _context.SaveChanges() > 0 ? true : false;
         }
+
+        public bool Delete<T>(T product)
+        {
+            if (product == null)
+                return false;
+
+            _context.Remove(product);
+            return _context.SaveChanges() > 0 ? true : false;
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.dataGridView_ProductsIssue.RowTemplate.Height = 29;
             this.dataGridView_ProductsIssue.Size = new System.Drawing.Size(498, 188);
             this.dataGridView_ProductsIssue.TabIndex = 0;
+            this.dataGridView_ProductsIssue.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ProductsIssue_CellContentClick);
             // 
             // textBox_InputProductSKU
             // 
@@ -91,6 +92,7 @@
             this.button_IssueProductsExemplars.TabIndex = 5;
             this.button_IssueProductsExemplars.Text = "Выдать";
             this.button_IssueProductsExemplars.UseVisualStyleBackColor = true;
+            this.button_IssueProductsExemplars.Click += new System.EventHandler(this.button_IssueProductsExemplars_Click);
             // 
             // ProductsIssueWindow
             // 
@@ -106,6 +108,7 @@
             this.MaximizeBox = false;
             this.Name = "ProductsIssueWindow";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.ProductsIssueWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ProductsIssue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

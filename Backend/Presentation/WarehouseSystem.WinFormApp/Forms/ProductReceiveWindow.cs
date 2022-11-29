@@ -38,13 +38,9 @@ namespace WarehouseSystem.WinFormApp.Forms
             var result = _productService.AddProduct(name, city, date, count, price, numberSupplier, false);
 
             if (result)
-            {
-                this.Close();
-            }
+                MessageBox.Show("Товар успешно получен!");
             else
-            {
                 MessageBox.Show("Произошла ошибка!");
-            }
         }
     }
 }

@@ -134,5 +134,24 @@ namespace WarehouseSystem.Application.Services
 
             return result.ToString();
         }
+
+        public bool IssueProduct(int productSKU, int count)
+        {
+            var productEntity = _productRepository.GetProductBySKU(productSKU);
+
+            if (productEntity == null)
+                return false;
+
+            if (productEntity.Exemplars.Count() < count)
+                return false;
+
+            for (int i = 0; i < count; i++)
+            {
+                var examplarProduct = productEntity.Exemplars.FirstOrDefault();
+                _productRepository.Delete(examplarProduct);
+            }
+
+            return true;
+        }
     }
 }
