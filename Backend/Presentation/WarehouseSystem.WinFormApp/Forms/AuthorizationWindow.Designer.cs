@@ -89,6 +89,7 @@
             this.button_EnterAuthorization.TabIndex = 5;
             this.button_EnterAuthorization.Text = "Войти";
             this.button_EnterAuthorization.UseVisualStyleBackColor = true;
+            this.button_EnterAuthorization.Click += new System.EventHandler(this.button_EnterAuthorization_Click);
             // 
             // AuthorizationWindow
             // 

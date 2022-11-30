@@ -34,7 +34,7 @@ namespace WarehouseSystem.WinFormApp
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<MainWindow>());
+            System.Windows.Forms.Application.Run(ServiceProvider.GetRequiredService<AuthorizationWindow>());
         }
         public static IServiceProvider ServiceProvider { get; private set; }
 
@@ -63,6 +63,7 @@ namespace WarehouseSystem.WinFormApp
                     services.AddTransient<ProductDetailWindow>();
                     services.AddTransient<ProductReceiveWindow>();
                     services.AddTransient<ProductsIssueWindow>();
+                    services.AddTransient<AuthorizationWindow>();
                 });
         }
     }
