@@ -34,6 +34,7 @@
             this.button_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_MainWindow_SupplierDetail = new System.Windows.Forms.Button();
+            this.button_MainWindow_AddSupplier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // button_AddProductAxemplar
             // 
             this.button_AddProductAxemplar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_AddProductAxemplar.Location = new System.Drawing.Point(602, 105);
+            this.button_AddProductAxemplar.Location = new System.Drawing.Point(602, 52);
             this.button_AddProductAxemplar.Name = "button_AddProductAxemplar";
             this.button_AddProductAxemplar.Size = new System.Drawing.Size(187, 40);
             this.button_AddProductAxemplar.TabIndex = 2;
@@ -64,7 +65,7 @@
             // button_IssueProduct
             // 
             this.button_IssueProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_IssueProduct.Location = new System.Drawing.Point(602, 176);
+            this.button_IssueProduct.Location = new System.Drawing.Point(602, 115);
             this.button_IssueProduct.Name = "button_IssueProduct";
             this.button_IssueProduct.Size = new System.Drawing.Size(187, 40);
             this.button_IssueProduct.TabIndex = 3;
@@ -95,18 +96,29 @@
             // button_MainWindow_SupplierDetail
             // 
             this.button_MainWindow_SupplierDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_MainWindow_SupplierDetail.Location = new System.Drawing.Point(602, 248);
+            this.button_MainWindow_SupplierDetail.Location = new System.Drawing.Point(602, 260);
             this.button_MainWindow_SupplierDetail.Name = "button_MainWindow_SupplierDetail";
             this.button_MainWindow_SupplierDetail.Size = new System.Drawing.Size(187, 57);
             this.button_MainWindow_SupplierDetail.TabIndex = 7;
             this.button_MainWindow_SupplierDetail.Text = "Вывести поставщиков";
             this.button_MainWindow_SupplierDetail.UseVisualStyleBackColor = true;
             // 
+            // button_MainWindow_AddSupplier
+            // 
+            this.button_MainWindow_AddSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_MainWindow_AddSupplier.Location = new System.Drawing.Point(602, 178);
+            this.button_MainWindow_AddSupplier.Name = "button_MainWindow_AddSupplier";
+            this.button_MainWindow_AddSupplier.Size = new System.Drawing.Size(187, 58);
+            this.button_MainWindow_AddSupplier.TabIndex = 8;
+            this.button_MainWindow_AddSupplier.Text = "Добавить поставщика";
+            this.button_MainWindow_AddSupplier.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 493);
+            this.Controls.Add(this.button_MainWindow_AddSupplier);
             this.Controls.Add(this.button_MainWindow_SupplierDetail);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Exit);
@@ -130,5 +142,6 @@
         private Button button_Exit;
         private Button button1;
         private Button button_MainWindow_SupplierDetail;
+        private Button button_MainWindow_AddSupplier;
     }
 }
