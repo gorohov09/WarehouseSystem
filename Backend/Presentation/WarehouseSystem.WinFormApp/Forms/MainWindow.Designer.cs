@@ -33,6 +33,7 @@
             this.button_IssueProduct = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button_MainWindow_SupplierDetail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,11 +92,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_MainWindow_SupplierDetail
+            // 
+            this.button_MainWindow_SupplierDetail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_MainWindow_SupplierDetail.Location = new System.Drawing.Point(602, 248);
+            this.button_MainWindow_SupplierDetail.Name = "button_MainWindow_SupplierDetail";
+            this.button_MainWindow_SupplierDetail.Size = new System.Drawing.Size(187, 57);
+            this.button_MainWindow_SupplierDetail.TabIndex = 7;
+            this.button_MainWindow_SupplierDetail.Text = "Вывести поставщиков";
+            this.button_MainWindow_SupplierDetail.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 493);
+            this.Controls.Add(this.button_MainWindow_SupplierDetail);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.button_IssueProduct);
@@ -117,5 +129,6 @@
         private Button button_IssueProduct;
         private Button button_Exit;
         private Button button1;
+        private Button button_MainWindow_SupplierDetail;
     }
 }
