@@ -28,16 +28,26 @@ namespace WarehouseSystem.Application.Services
             var timeList = GetTime(dateProud);
 
             var exemplarsEntity = new List<ProductExemplar>();
+
             for (int i = 0; i < count; i++)
             {
-                var examplar = new ProductExemplar
+                var cellNumber = random.Next(1, 100);
+                var rowNumber = random.Next(1, 100);
+
+                var takenSpace = _productRepository.IsTakenSpace(cellNumber, rowNumber);
+
+                if (!takenSpace) 
                 {
-                    CellNumber = random.Next(1, 100),
-                    RowNumber = random.Next(1, 100),
-                    DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
-                    CityProd = city,
-                };
-                exemplarsEntity.Add(examplar);
+                    var examplar = new ProductExemplar
+                    {
+                        CellNumber = cellNumber,
+                        RowNumber = rowNumber,
+                        DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
+                        CityProd = city,
+                    };
+                    exemplarsEntity.Add(examplar);
+                }
+                i--;
             }
 
             var supplierEntity = _productRepository.GetSupplierById(numberSupplier);

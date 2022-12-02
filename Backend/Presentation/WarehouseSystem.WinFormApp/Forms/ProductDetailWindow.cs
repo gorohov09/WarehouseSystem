@@ -33,6 +33,8 @@ namespace WarehouseSystem.WinFormApp.Forms
             dataGridView_ProductDetail.Columns[1].HeaderText = "Артикул";
             dataGridView_ProductDetail.Columns[2].HeaderText = "Номер ряда";
             dataGridView_ProductDetail.Columns[3].HeaderText = "Номер ячейки";
+            dataGridView_ProductDetail.Columns[4].HeaderText = "Город производства";
+            dataGridView_ProductDetail.Columns[5].HeaderText = "Дата производства";
 
             label_ProductDetail_ProductSKU_Output.Text = productBO.ProductSKU.ToString();
             label_ProductDetail_PriceProd_Output.Text = productBO.PriceProd.ToString();

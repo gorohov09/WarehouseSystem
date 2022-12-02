@@ -13,5 +13,7 @@ namespace WarehouseSystem.DAL.Interfaces
         bool Save<T>(T product);
 
         bool Delete<T>(T product);
+
+        bool IsTakenSpace(int cellNumber, int rowNumber);
     }
 }
