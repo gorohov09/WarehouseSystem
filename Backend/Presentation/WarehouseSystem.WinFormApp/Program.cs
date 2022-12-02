@@ -50,7 +50,7 @@ namespace WarehouseSystem.WinFormApp
                 .ConfigureServices((context, services) => {
                     services.AddDbContext<WarehouseContext>(options =>
                     {
-                        options.UseSqlServer(@"data source=LAPTOP-9S2AK2B9;initial catalog=WarehouseDb;trusted_connection=true");
+                        options.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=WarehouseDb;Integrated Security=True;");
                     });
 
                     //Repositories

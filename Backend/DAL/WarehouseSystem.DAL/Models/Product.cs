@@ -12,10 +12,6 @@ namespace WarehouseSystem.DAL.Models
         [MaxLength(100)]
         public string Name { get; set; }
 
-        public string CityProd { get; set; }
-
-        public DateTime DateProd { get; set; }
-
         [Column(TypeName = "decimal(18, 2)")]
         public decimal PriceProd { get; set; }
 

@@ -38,8 +38,6 @@ namespace WarehouseSystem.WinFormApp.Forms
             label_ProductDetail_PriceProd_Output.Text = productBO.PriceProd.ToString();
             label_ProductDetail_NumbOfCopies_Output.Text = productBO.Count.ToString();
             label_ProductDetail_IsCertificatePresent_Output.Text = productBO.IsCertificatePresent.ToString();
-            label_ProductDetail_DateProd_Output.Text = productBO.DateProd.ToString();
-            label_ProductDetail_CityProd_Output.Text = productBO.CityProd.ToString();
             label_ProductDetail_Name_Output.Text = productBO.Name.ToString();
             label_ProductDetail_VendorNumber_Output.Text = productBO.Suppliers.ToString();
         }

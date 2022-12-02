@@ -6,10 +6,6 @@
 
         public string Name { get; set; }
 
-        public string CityProd { get; set; }
-
-        public string DateProd { get; set; }
-
         public int Count { get; set; }
 
         public decimal PriceProd { get; set; }

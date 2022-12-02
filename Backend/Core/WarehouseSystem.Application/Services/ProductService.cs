@@ -33,7 +33,9 @@ namespace WarehouseSystem.Application.Services
                 var examplar = new ProductExemplar
                 {
                     CellNumber = random.Next(1, 100),
-                    RowNumber = random.Next(1, 100)
+                    RowNumber = random.Next(1, 100),
+                    DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
+                    CityProd = city,
                 };
                 exemplarsEntity.Add(examplar);
             }
@@ -46,8 +48,6 @@ namespace WarehouseSystem.Application.Services
             var productEntity = new Product
             {
                 Name = name,
-                DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
-                CityProd = city,
                 IsCertificatePresent = isCertificat,
                 PriceProd = price,
                 Exemplars = exemplarsEntity,
@@ -79,8 +79,6 @@ namespace WarehouseSystem.Application.Services
             var productBO = new ProductDetailsBO()
             {
                 ProductSKU = product.ProductSKU,
-                CityProd = product.CityProd,
-                DateProd = product.DateProd.ToShortDateString(),
                 Name = product.Name,
                 IsCertificatePresent = product.IsCertificatePresent,
                 PriceProd = product.PriceProd,
@@ -91,6 +89,8 @@ namespace WarehouseSystem.Application.Services
                     Code = ex.Code,
                     CellNumber = ex.CellNumber,
                     RowNumber = ex.RowNumber,
+                    CityProd = ex.CityProd,
+                    DateProd = ex.DateProd.ToShortDateString(),
                 }),
                 Suppliers = GetSuppliersToString(product.Suppliers)
             };
