@@ -112,6 +112,7 @@
             this.button_MainWindow_AddSupplier.TabIndex = 8;
             this.button_MainWindow_AddSupplier.Text = "Добавить поставщика";
             this.button_MainWindow_AddSupplier.UseVisualStyleBackColor = true;
+            this.button_MainWindow_AddSupplier.Click += new System.EventHandler(this.button_MainWindow_AddSupplier_Click);
             // 
             // MainWindow
             // 

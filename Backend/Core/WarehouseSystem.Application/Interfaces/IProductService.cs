@@ -11,5 +11,7 @@ namespace WarehouseSystem.Application.Interfaces
         bool AddProduct(string name, string city, string dateProud, int count, decimal price, int numberSupplier, bool isCertificat);
 
         bool IssueProduct(int productSKU, int count);
+
+        bool AddSupplier(string nameSupplier, string addressSupplier, string phoneSupplier);
     }
 }

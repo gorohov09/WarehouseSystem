@@ -64,6 +64,7 @@ namespace WarehouseSystem.WinFormApp
                     services.AddTransient<ProductReceiveWindow>();
                     services.AddTransient<ProductsIssueWindow>();
                     services.AddTransient<AuthorizationWindow>();
+                    services.AddTransient<SupplierAddWindow>();
                 });
         }
     }

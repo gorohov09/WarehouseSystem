@@ -8,14 +8,17 @@ namespace WarehouseSystem.WinFormApp.Forms
         private readonly ProductDetailWindow _productDetailWindow;
         private readonly ProductReceiveWindow _productReceiveWindow;
         private readonly ProductsIssueWindow _productsIssueWindow;
+        private readonly SupplierAddWindow _supplierAddWindow;
 
         public MainWindow(IProductService productService, ProductDetailWindow productDetailWindow, 
-            ProductReceiveWindow productReceiveWindow, ProductsIssueWindow productsIssueWindow)
+            ProductReceiveWindow productReceiveWindow, ProductsIssueWindow productsIssueWindow,
+            SupplierAddWindow supplierAddWindow)
         {
             _productService = productService;
             _productDetailWindow = productDetailWindow;
             _productReceiveWindow = productReceiveWindow;
             _productsIssueWindow = productsIssueWindow;
+            _supplierAddWindow = supplierAddWindow;
             InitializeComponent();
         }
 
@@ -54,6 +57,11 @@ namespace WarehouseSystem.WinFormApp.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = _productService.GetProducts().ToList();
+        }
+
+        private void button_MainWindow_AddSupplier_Click(object sender, EventArgs e)
+        {
+            _supplierAddWindow.ShowDialog();
         }
     }
 }

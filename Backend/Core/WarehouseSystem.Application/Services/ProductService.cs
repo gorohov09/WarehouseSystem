@@ -167,5 +167,21 @@ namespace WarehouseSystem.Application.Services
 
             return true;
         }
+
+        public bool AddSupplier(string nameSupplier, string addressSupplier, string phoneSupplier)
+        {
+            var supplierEntity = new Supplier()
+            {
+                Name = nameSupplier,
+                Address = addressSupplier,
+                Phone = phoneSupplier,
+            };
+
+            var result = _productRepository.Save(supplierEntity);
+            if (result)
+               return true;
+
+            return false;
+        }
     }
 }
