@@ -82,5 +82,15 @@ namespace WarehouseSystem.WinFormApp.Forms
         {
             Environment.Exit(0);
         }
+
+        private void button_MainWindow__Click(object sender, EventArgs e)
+        {
+            var patternSearch = textBox_MainWndow_SearchProduct_Input.Text;
+
+            if (string.IsNullOrEmpty(patternSearch))
+                dataGridView1.DataSource = _productService.GetProducts().ToList();
+            else
+                dataGridView1.DataSource = _productService.SearchProducts(patternSearch).ToList();
+        }
     }
 }

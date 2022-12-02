@@ -244,6 +244,7 @@
             this.Controls.Add(this.label_ProductReceive_ProductSKU);
             this.Name = "ProductReceiveWindow";
             this.Text = "ProductReceiveWindow";
+            this.Load += new System.EventHandler(this.ProductReceiveWindow_Load);
             this.groupBox_ProductReceive_IsCertificatePresent.ResumeLayout(false);
             this.groupBox_ProductReceive_IsCertificatePresent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ProductReceiveWindow_Suppliers)).EndInit();

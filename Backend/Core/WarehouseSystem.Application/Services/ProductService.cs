@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 using WarehouseSystem.Application.BO;
 using WarehouseSystem.Application.Interfaces;
 using WarehouseSystem.DAL.Interfaces;
@@ -195,6 +196,29 @@ namespace WarehouseSystem.Application.Services
                 Phone = s.Phone,
                 Address = s.Address,
             });
+        }
+
+        public IEnumerable<ProductBO> SearchProducts(string patternSearch)
+        {
+            Regex regex = new Regex("^[0-9]+$");
+
+            IEnumerable<Product> products;
+
+            if (regex.IsMatch(patternSearch))
+                products = _productRepository.GetProductsBySKU(int.Parse(patternSearch));
+
+            else
+                products = _productRepository.GetProductsByName(patternSearch);
+
+            var productsBO = products.Select(product => new ProductBO
+            {
+                ProductSKU = product.ProductSKU,
+                Name = product.Name,
+                PriceProd = product.PriceProd,
+                NumbOfCopies = product.Exemplars.Count(),
+            });
+
+            return productsBO;
         }
     }
 }

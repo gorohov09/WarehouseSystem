@@ -6,6 +6,10 @@ namespace WarehouseSystem.DAL.Interfaces
     {
         IEnumerable<Product> GetProducts();
 
+        IEnumerable<Product> GetProductsBySKU(int productSKU);
+
+        IEnumerable<Product> GetProductsByName(string productName);
+
         Product GetProductBySKU(int productSKU);
 
         Supplier GetSupplierById(int id);
