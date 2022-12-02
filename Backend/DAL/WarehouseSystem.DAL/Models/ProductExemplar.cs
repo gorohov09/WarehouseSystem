@@ -17,5 +17,9 @@ namespace WarehouseSystem.DAL.Models
         public int RowNumber { get; set; }
 
         public int CellNumber { get; set; }
+
+        public string CityProd { get; set; }
+
+        public DateTime DateProd { get; set; }
     }
 }

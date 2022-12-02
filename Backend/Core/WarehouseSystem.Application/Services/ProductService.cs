@@ -28,14 +28,27 @@ namespace WarehouseSystem.Application.Services
             var timeList = GetTime(dateProud);
 
             var exemplarsEntity = new List<ProductExemplar>();
+
             for (int i = 0; i < count; i++)
             {
-                var examplar = new ProductExemplar
+                var cellNumber = random.Next(1, 100);
+                var rowNumber = random.Next(1, 100);
+
+                var takenSpace = _productRepository.IsTakenSpace(cellNumber, rowNumber);
+
+                if (!takenSpace) 
                 {
-                    CellNumber = random.Next(1, 100),
-                    RowNumber = random.Next(1, 100)
-                };
-                exemplarsEntity.Add(examplar);
+                    var examplar = new ProductExemplar
+                    {
+                        CellNumber = cellNumber,
+                        RowNumber = rowNumber,
+                        DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
+                        CityProd = city,
+                    };
+                    exemplarsEntity.Add(examplar);
+                }
+                else
+                    i--;
             }
 
             var supplierEntity = _productRepository.GetSupplierById(numberSupplier);
@@ -46,8 +59,6 @@ namespace WarehouseSystem.Application.Services
             var productEntity = new Product
             {
                 Name = name,
-                DateProd = new DateTime(timeList[0], timeList[1], timeList[2]),
-                CityProd = city,
                 IsCertificatePresent = isCertificat,
                 PriceProd = price,
                 Exemplars = exemplarsEntity,
@@ -79,8 +90,6 @@ namespace WarehouseSystem.Application.Services
             var productBO = new ProductDetailsBO()
             {
                 ProductSKU = product.ProductSKU,
-                CityProd = product.CityProd,
-                DateProd = product.DateProd.ToShortDateString(),
                 Name = product.Name,
                 IsCertificatePresent = product.IsCertificatePresent,
                 PriceProd = product.PriceProd,
@@ -91,6 +100,8 @@ namespace WarehouseSystem.Application.Services
                     Code = ex.Code,
                     CellNumber = ex.CellNumber,
                     RowNumber = ex.RowNumber,
+                    CityProd = ex.CityProd,
+                    DateProd = ex.DateProd.ToShortDateString(),
                 }),
                 Suppliers = GetSuppliersToString(product.Suppliers)
             };
@@ -151,7 +162,39 @@ namespace WarehouseSystem.Application.Services
                 _productRepository.Delete(examplarProduct);
             }
 
+            if (productEntity.Exemplars.Count() == 0)
+                _productRepository.Delete(productEntity);
+
             return true;
+        }
+
+        public bool AddSupplier(string nameSupplier, string addressSupplier, string phoneSupplier)
+        {
+            var supplierEntity = new Supplier()
+            {
+                Name = nameSupplier,
+                Address = addressSupplier,
+                Phone = phoneSupplier,
+            };
+
+            var result = _productRepository.Save(supplierEntity);
+            if (result)
+               return true;
+
+            return false;
+        }
+
+        public IEnumerable<SupplierBO> GetSuppliers()
+        {
+            var suppliers = _productRepository.GetAllSuppliers();
+
+            return suppliers.Select(s => new SupplierBO
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Phone = s.Phone,
+                Address = s.Address,
+            });
         }
     }
 }

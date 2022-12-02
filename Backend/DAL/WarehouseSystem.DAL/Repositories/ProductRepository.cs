@@ -54,5 +54,15 @@ namespace WarehouseSystem.DAL.Repositories
             _context.Remove(product);
             return _context.SaveChanges() > 0 ? true : false;
         }
+
+        public bool IsTakenSpace(int cellNumber, int rowNumber)
+        {
+            return _context.ProductExemplars.Any(ex => ex.CellNumber == cellNumber && ex.RowNumber == rowNumber);
+        }
+
+        public IEnumerable<Supplier> GetAllSuppliers()
+        {
+            return _context.Suppliers.ToList();
+        }
     }
 }

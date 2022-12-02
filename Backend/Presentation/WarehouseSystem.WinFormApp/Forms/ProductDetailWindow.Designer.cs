@@ -102,9 +102,8 @@
             this.label_ProductDetail_CityProd_Output.AutoSize = true;
             this.label_ProductDetail_CityProd_Output.Location = new System.Drawing.Point(78, 88);
             this.label_ProductDetail_CityProd_Output.Name = "label_ProductDetail_CityProd_Output";
-            this.label_ProductDetail_CityProd_Output.Size = new System.Drawing.Size(42, 20);
+            this.label_ProductDetail_CityProd_Output.Size = new System.Drawing.Size(0, 20);
             this.label_ProductDetail_CityProd_Output.TabIndex = 6;
-            this.label_ProductDetail_CityProd_Output.Text = "none";
             // 
             // label_ProductDetail_CityProd
             // 
@@ -112,18 +111,16 @@
             this.label_ProductDetail_CityProd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_ProductDetail_CityProd.Location = new System.Drawing.Point(12, 86);
             this.label_ProductDetail_CityProd.Name = "label_ProductDetail_CityProd";
-            this.label_ProductDetail_CityProd.Size = new System.Drawing.Size(60, 23);
+            this.label_ProductDetail_CityProd.Size = new System.Drawing.Size(0, 23);
             this.label_ProductDetail_CityProd.TabIndex = 5;
-            this.label_ProductDetail_CityProd.Text = "Город:";
             // 
             // label_ProductDetail_DateProd_Output
             // 
             this.label_ProductDetail_DateProd_Output.AutoSize = true;
             this.label_ProductDetail_DateProd_Output.Location = new System.Drawing.Point(183, 126);
             this.label_ProductDetail_DateProd_Output.Name = "label_ProductDetail_DateProd_Output";
-            this.label_ProductDetail_DateProd_Output.Size = new System.Drawing.Size(42, 20);
+            this.label_ProductDetail_DateProd_Output.Size = new System.Drawing.Size(0, 20);
             this.label_ProductDetail_DateProd_Output.TabIndex = 8;
-            this.label_ProductDetail_DateProd_Output.Text = "none";
             // 
             // label_ProductDetail_DateProd
             // 
@@ -131,15 +128,14 @@
             this.label_ProductDetail_DateProd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_ProductDetail_DateProd.Location = new System.Drawing.Point(12, 124);
             this.label_ProductDetail_DateProd.Name = "label_ProductDetail_DateProd";
-            this.label_ProductDetail_DateProd.Size = new System.Drawing.Size(165, 23);
+            this.label_ProductDetail_DateProd.Size = new System.Drawing.Size(0, 23);
             this.label_ProductDetail_DateProd.TabIndex = 7;
-            this.label_ProductDetail_DateProd.Text = "Дата изготовления:";
             this.label_ProductDetail_DateProd.Click += new System.EventHandler(this.label2_Click);
             // 
             // label_ProductDetail_NumbOfCopies_Output
             // 
             this.label_ProductDetail_NumbOfCopies_Output.AutoSize = true;
-            this.label_ProductDetail_NumbOfCopies_Output.Location = new System.Drawing.Point(129, 165);
+            this.label_ProductDetail_NumbOfCopies_Output.Location = new System.Drawing.Point(125, 91);
             this.label_ProductDetail_NumbOfCopies_Output.Name = "label_ProductDetail_NumbOfCopies_Output";
             this.label_ProductDetail_NumbOfCopies_Output.Size = new System.Drawing.Size(42, 20);
             this.label_ProductDetail_NumbOfCopies_Output.TabIndex = 10;
@@ -149,7 +145,7 @@
             // 
             this.label_ProductDetail_NumbOfCopies.AutoSize = true;
             this.label_ProductDetail_NumbOfCopies.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductDetail_NumbOfCopies.Location = new System.Drawing.Point(16, 162);
+            this.label_ProductDetail_NumbOfCopies.Location = new System.Drawing.Point(12, 88);
             this.label_ProductDetail_NumbOfCopies.Name = "label_ProductDetail_NumbOfCopies";
             this.label_ProductDetail_NumbOfCopies.Size = new System.Drawing.Size(107, 23);
             this.label_ProductDetail_NumbOfCopies.TabIndex = 9;
@@ -158,7 +154,7 @@
             // label_ProductDetail_PriceProd_Output
             // 
             this.label_ProductDetail_PriceProd_Output.AutoSize = true;
-            this.label_ProductDetail_PriceProd_Output.Location = new System.Drawing.Point(77, 201);
+            this.label_ProductDetail_PriceProd_Output.Location = new System.Drawing.Point(81, 129);
             this.label_ProductDetail_PriceProd_Output.Name = "label_ProductDetail_PriceProd_Output";
             this.label_ProductDetail_PriceProd_Output.Size = new System.Drawing.Size(42, 20);
             this.label_ProductDetail_PriceProd_Output.TabIndex = 12;
@@ -168,7 +164,7 @@
             // 
             this.label_ProductDetail_PriceProd.AutoSize = true;
             this.label_ProductDetail_PriceProd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductDetail_PriceProd.Location = new System.Drawing.Point(16, 198);
+            this.label_ProductDetail_PriceProd.Location = new System.Drawing.Point(15, 126);
             this.label_ProductDetail_PriceProd.Name = "label_ProductDetail_PriceProd";
             this.label_ProductDetail_PriceProd.Size = new System.Drawing.Size(55, 23);
             this.label_ProductDetail_PriceProd.TabIndex = 11;
@@ -177,7 +173,7 @@
             // label_ProductDetail_VendorNumber_Output
             // 
             this.label_ProductDetail_VendorNumber_Output.AutoSize = true;
-            this.label_ProductDetail_VendorNumber_Output.Location = new System.Drawing.Point(153, 240);
+            this.label_ProductDetail_VendorNumber_Output.Location = new System.Drawing.Point(135, 170);
             this.label_ProductDetail_VendorNumber_Output.Name = "label_ProductDetail_VendorNumber_Output";
             this.label_ProductDetail_VendorNumber_Output.Size = new System.Drawing.Size(42, 20);
             this.label_ProductDetail_VendorNumber_Output.TabIndex = 14;
@@ -187,7 +183,7 @@
             // 
             this.label_ProductDetail_VendorNumber.AutoSize = true;
             this.label_ProductDetail_VendorNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductDetail_VendorNumber.Location = new System.Drawing.Point(16, 237);
+            this.label_ProductDetail_VendorNumber.Location = new System.Drawing.Point(15, 168);
             this.label_ProductDetail_VendorNumber.Name = "label_ProductDetail_VendorNumber";
             this.label_ProductDetail_VendorNumber.Size = new System.Drawing.Size(114, 23);
             this.label_ProductDetail_VendorNumber.TabIndex = 13;
@@ -196,7 +192,7 @@
             // label_ProductDetail_IsCertificatePresent_Output
             // 
             this.label_ProductDetail_IsCertificatePresent_Output.AutoSize = true;
-            this.label_ProductDetail_IsCertificatePresent_Output.Location = new System.Drawing.Point(129, 279);
+            this.label_ProductDetail_IsCertificatePresent_Output.Location = new System.Drawing.Point(135, 214);
             this.label_ProductDetail_IsCertificatePresent_Output.Name = "label_ProductDetail_IsCertificatePresent_Output";
             this.label_ProductDetail_IsCertificatePresent_Output.Size = new System.Drawing.Size(42, 20);
             this.label_ProductDetail_IsCertificatePresent_Output.TabIndex = 16;
@@ -206,7 +202,7 @@
             // 
             this.label_ProductDetail_IsCertificatePresent.AutoSize = true;
             this.label_ProductDetail_IsCertificatePresent.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ProductDetail_IsCertificatePresent.Location = new System.Drawing.Point(15, 276);
+            this.label_ProductDetail_IsCertificatePresent.Location = new System.Drawing.Point(15, 212);
             this.label_ProductDetail_IsCertificatePresent.Name = "label_ProductDetail_IsCertificatePresent";
             this.label_ProductDetail_IsCertificatePresent.Size = new System.Drawing.Size(108, 23);
             this.label_ProductDetail_IsCertificatePresent.TabIndex = 15;

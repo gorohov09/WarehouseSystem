@@ -33,13 +33,13 @@ namespace WarehouseSystem.WinFormApp.Forms
             dataGridView_ProductDetail.Columns[1].HeaderText = "Артикул";
             dataGridView_ProductDetail.Columns[2].HeaderText = "Номер ряда";
             dataGridView_ProductDetail.Columns[3].HeaderText = "Номер ячейки";
+            dataGridView_ProductDetail.Columns[4].HeaderText = "Город производства";
+            dataGridView_ProductDetail.Columns[5].HeaderText = "Дата производства";
 
             label_ProductDetail_ProductSKU_Output.Text = productBO.ProductSKU.ToString();
             label_ProductDetail_PriceProd_Output.Text = productBO.PriceProd.ToString();
             label_ProductDetail_NumbOfCopies_Output.Text = productBO.Count.ToString();
             label_ProductDetail_IsCertificatePresent_Output.Text = productBO.IsCertificatePresent.ToString();
-            label_ProductDetail_DateProd_Output.Text = productBO.DateProd.ToString();
-            label_ProductDetail_CityProd_Output.Text = productBO.CityProd.ToString();
             label_ProductDetail_Name_Output.Text = productBO.Name.ToString();
             label_ProductDetail_VendorNumber_Output.Text = productBO.Suppliers.ToString();
         }

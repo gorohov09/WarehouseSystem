@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_SuoolierAddWindow_Name_Input = new System.Windows.Forms.TextBox();
+            this.textBox_SupplierAddWindow_Name_Input = new System.Windows.Forms.TextBox();
             this.textBox_SupplierAddWindow_Phone_Input = new System.Windows.Forms.TextBox();
             this.textBox_SupplierAddWindow_Address_Input = new System.Windows.Forms.TextBox();
             this.label_SupplierAddWindow_Name = new System.Windows.Forms.Label();
@@ -37,12 +37,12 @@
             this.button_SupplierAddWindow_AddSupplier = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox_SuoolierAddWindow_Name_Input
+            // textBox_SupplierAddWindow_Name_Input
             // 
-            this.textBox_SuoolierAddWindow_Name_Input.Location = new System.Drawing.Point(100, 66);
-            this.textBox_SuoolierAddWindow_Name_Input.Name = "textBox_SuoolierAddWindow_Name_Input";
-            this.textBox_SuoolierAddWindow_Name_Input.Size = new System.Drawing.Size(177, 27);
-            this.textBox_SuoolierAddWindow_Name_Input.TabIndex = 0;
+            this.textBox_SupplierAddWindow_Name_Input.Location = new System.Drawing.Point(100, 66);
+            this.textBox_SupplierAddWindow_Name_Input.Name = "textBox_SupplierAddWindow_Name_Input";
+            this.textBox_SupplierAddWindow_Name_Input.Size = new System.Drawing.Size(177, 27);
+            this.textBox_SupplierAddWindow_Name_Input.TabIndex = 0;
             // 
             // textBox_SupplierAddWindow_Phone_Input
             // 
@@ -97,6 +97,7 @@
             this.button_SupplierAddWindow_AddSupplier.TabIndex = 6;
             this.button_SupplierAddWindow_AddSupplier.Text = "Добавить";
             this.button_SupplierAddWindow_AddSupplier.UseVisualStyleBackColor = true;
+            this.button_SupplierAddWindow_AddSupplier.Click += new System.EventHandler(this.button_SupplierAddWindow_AddSupplier_Click);
             // 
             // SupplierAddWindow
             // 
@@ -109,7 +110,7 @@
             this.Controls.Add(this.label_SupplierAddWindow_Name);
             this.Controls.Add(this.textBox_SupplierAddWindow_Address_Input);
             this.Controls.Add(this.textBox_SupplierAddWindow_Phone_Input);
-            this.Controls.Add(this.textBox_SuoolierAddWindow_Name_Input);
+            this.Controls.Add(this.textBox_SupplierAddWindow_Name_Input);
             this.MaximizeBox = false;
             this.Name = "SupplierAddWindow";
             this.ShowIcon = false;
@@ -120,7 +121,7 @@
 
         #endregion
 
-        private TextBox textBox_SuoolierAddWindow_Name_Input;
+        private TextBox textBox_SupplierAddWindow_Name_Input;
         private TextBox textBox_SupplierAddWindow_Phone_Input;
         private TextBox textBox_SupplierAddWindow_Address_Input;
         private Label label_SupplierAddWindow_Name;
