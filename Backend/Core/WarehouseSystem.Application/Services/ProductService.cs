@@ -47,7 +47,8 @@ namespace WarehouseSystem.Application.Services
                     };
                     exemplarsEntity.Add(examplar);
                 }
-                i--;
+                else
+                    i--;
             }
 
             var supplierEntity = _productRepository.GetSupplierById(numberSupplier);
@@ -160,6 +161,9 @@ namespace WarehouseSystem.Application.Services
                 var examplarProduct = productEntity.Exemplars.FirstOrDefault();
                 _productRepository.Delete(examplarProduct);
             }
+
+            if (productEntity.Exemplars.Count() == 0)
+                _productRepository.Delete(productEntity);
 
             return true;
         }
