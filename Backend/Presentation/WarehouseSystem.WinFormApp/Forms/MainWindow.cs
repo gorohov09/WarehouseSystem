@@ -38,11 +38,18 @@ namespace WarehouseSystem.WinFormApp.Forms
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                var obj = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                _productDetailWindow.ProductId = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                _productDetailWindow.ShowDialog();
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    var obj = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    _productDetailWindow.ProductId = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    _productDetailWindow.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+                return;
             }
         }
 

@@ -50,6 +50,10 @@
             // 
             // dataGridView_ProductDetail
             // 
+            this.dataGridView_ProductDetail.AllowUserToAddRows = false;
+            this.dataGridView_ProductDetail.AllowUserToDeleteRows = false;
+            this.dataGridView_ProductDetail.AllowUserToResizeColumns = false;
+            this.dataGridView_ProductDetail.AllowUserToResizeRows = false;
             this.dataGridView_ProductDetail.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView_ProductDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ProductDetail.Location = new System.Drawing.Point(383, 12);

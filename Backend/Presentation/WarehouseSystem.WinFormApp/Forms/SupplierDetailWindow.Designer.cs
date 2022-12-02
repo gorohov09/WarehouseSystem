@@ -34,20 +34,24 @@
             // 
             // dataGridView_SupplierDetail
             // 
+            this.dataGridView_SupplierDetail.AllowUserToAddRows = false;
+            this.dataGridView_SupplierDetail.AllowUserToDeleteRows = false;
+            this.dataGridView_SupplierDetail.AllowUserToResizeColumns = false;
+            this.dataGridView_SupplierDetail.AllowUserToResizeRows = false;
             this.dataGridView_SupplierDetail.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView_SupplierDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_SupplierDetail.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_SupplierDetail.Name = "dataGridView_SupplierDetail";
             this.dataGridView_SupplierDetail.RowHeadersWidth = 51;
             this.dataGridView_SupplierDetail.RowTemplate.Height = 29;
-            this.dataGridView_SupplierDetail.Size = new System.Drawing.Size(822, 469);
+            this.dataGridView_SupplierDetail.Size = new System.Drawing.Size(471, 255);
             this.dataGridView_SupplierDetail.TabIndex = 0;
             // 
             // SupplierDetailWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 493);
+            this.ClientSize = new System.Drawing.Size(495, 279);
             this.Controls.Add(this.dataGridView_SupplierDetail);
             this.MaximizeBox = false;
             this.Name = "SupplierDetailWindow";
