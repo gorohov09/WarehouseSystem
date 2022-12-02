@@ -51,5 +51,17 @@ namespace WarehouseSystem.WinFormApp.Forms
             else
                 MessageBox.Show("Произошла ошибка!");
         }
+
+        private void ProductReceiveWindow_Load(object sender, EventArgs e)
+        {
+            dataGridView_ProductReceiveWindow_Suppliers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_ProductReceiveWindow_Suppliers.AllowUserToAddRows = false;
+            dataGridView_ProductReceiveWindow_Suppliers.ReadOnly = true;
+            dataGridView_ProductReceiveWindow_Suppliers.DataSource = _productService.GetSuppliers().ToList();
+            dataGridView_ProductReceiveWindow_Suppliers.Columns[0].HeaderText = "Id";
+            dataGridView_ProductReceiveWindow_Suppliers.Columns[1].HeaderText = "Имя";
+            dataGridView_ProductReceiveWindow_Suppliers.Columns[2].HeaderText = "Адресс";
+            dataGridView_ProductReceiveWindow_Suppliers.Columns[3].HeaderText = "Телефонный номер";
+        }
     }
 }
