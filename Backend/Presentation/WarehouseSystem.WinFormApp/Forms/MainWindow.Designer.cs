@@ -146,6 +146,7 @@
             this.button_MainWindow_.TabIndex = 11;
             this.button_MainWindow_.Text = "Поиск";
             this.button_MainWindow_.UseVisualStyleBackColor = true;
+            this.button_MainWindow_.Click += new System.EventHandler(this.button_MainWindow__Click);
             // 
             // MainWindow
             // 

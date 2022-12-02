@@ -15,5 +15,7 @@ namespace WarehouseSystem.Application.Interfaces
         bool AddSupplier(string nameSupplier, string addressSupplier, string phoneSupplier);
 
         IEnumerable<SupplierBO> GetSuppliers();
+
+        IEnumerable<ProductBO> SearchProducts(string patternSearch);
     }
 }

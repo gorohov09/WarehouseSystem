@@ -64,5 +64,19 @@ namespace WarehouseSystem.DAL.Repositories
         {
             return _context.Suppliers.ToList();
         }
+
+        public IEnumerable<Product> GetProductsBySKU(int productSKU)
+        {
+            return _context.Products
+                .Where(p => p.ProductSKU == productSKU)
+                .ToList();
+        }
+
+        public IEnumerable<Product> GetProductsByName(string productName)
+        {
+            return _context.Products
+                .Where(p => p.Name == productName)
+                .ToList();
+        }
     }
 }
