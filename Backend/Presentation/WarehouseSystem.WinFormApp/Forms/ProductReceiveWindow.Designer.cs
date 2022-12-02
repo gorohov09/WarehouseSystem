@@ -45,7 +45,9 @@
             this.radioButton_ProductReceive_IsCertificatePresent_False = new System.Windows.Forms.RadioButton();
             this.groupBox_ProductReceive_IsCertificatePresent = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView_ProductReceiveWindow_Suppliers = new System.Windows.Forms.DataGridView();
             this.groupBox_ProductReceive_IsCertificatePresent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ProductReceiveWindow_Suppliers)).BeginInit();
             this.SuspendLayout();
             // 
             // label_ProductReceive_ProductSKU
@@ -204,11 +206,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView_ProductReceiveWindow_Suppliers
+            // 
+            this.dataGridView_ProductReceiveWindow_Suppliers.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView_ProductReceiveWindow_Suppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ProductReceiveWindow_Suppliers.Location = new System.Drawing.Point(608, 12);
+            this.dataGridView_ProductReceiveWindow_Suppliers.Name = "dataGridView_ProductReceiveWindow_Suppliers";
+            this.dataGridView_ProductReceiveWindow_Suppliers.RowHeadersWidth = 51;
+            this.dataGridView_ProductReceiveWindow_Suppliers.RowTemplate.Height = 29;
+            this.dataGridView_ProductReceiveWindow_Suppliers.Size = new System.Drawing.Size(300, 349);
+            this.dataGridView_ProductReceiveWindow_Suppliers.TabIndex = 20;
+            // 
             // ProductReceiveWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 373);
+            this.ClientSize = new System.Drawing.Size(920, 373);
+            this.Controls.Add(this.dataGridView_ProductReceiveWindow_Suppliers);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox_ProductReceive_IsCertificatePresent);
             this.Controls.Add(this.textBox_ProductReceive_VendorNumber_Input);
@@ -228,6 +242,7 @@
             this.Text = "ProductReceiveWindow";
             this.groupBox_ProductReceive_IsCertificatePresent.ResumeLayout(false);
             this.groupBox_ProductReceive_IsCertificatePresent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ProductReceiveWindow_Suppliers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +267,6 @@
         private RadioButton radioButton_ProductReceive_IsCertificatePresent_False;
         private GroupBox groupBox_ProductReceive_IsCertificatePresent;
         private Button button1;
+        private DataGridView dataGridView_ProductReceiveWindow_Suppliers;
     }
 }

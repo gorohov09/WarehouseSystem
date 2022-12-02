@@ -35,6 +35,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_MainWindow_SupplierDetail = new System.Windows.Forms.Button();
             this.button_MainWindow_AddSupplier = new System.Windows.Forms.Button();
+            this.textBox_MainWndow_SearchProduct_Input = new System.Windows.Forms.TextBox();
+            this.label_MainWindow_SearchProduct = new System.Windows.Forms.Label();
+            this.button_MainWindow_ = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,11 +46,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(546, 385);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 261);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -86,9 +89,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(24, 439);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(105, 29);
             this.button1.TabIndex = 6;
             this.button1.Text = "Обновить";
             this.button1.UseVisualStyleBackColor = true;
@@ -116,11 +120,41 @@
             this.button_MainWindow_AddSupplier.UseVisualStyleBackColor = true;
             this.button_MainWindow_AddSupplier.Click += new System.EventHandler(this.button_MainWindow_AddSupplier_Click);
             // 
+            // textBox_MainWndow_SearchProduct_Input
+            // 
+            this.textBox_MainWndow_SearchProduct_Input.Location = new System.Drawing.Point(181, 78);
+            this.textBox_MainWndow_SearchProduct_Input.Name = "textBox_MainWndow_SearchProduct_Input";
+            this.textBox_MainWndow_SearchProduct_Input.Size = new System.Drawing.Size(214, 27);
+            this.textBox_MainWndow_SearchProduct_Input.TabIndex = 9;
+            // 
+            // label_MainWindow_SearchProduct
+            // 
+            this.label_MainWindow_SearchProduct.AutoSize = true;
+            this.label_MainWindow_SearchProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_MainWindow_SearchProduct.Location = new System.Drawing.Point(107, 39);
+            this.label_MainWindow_SearchProduct.Name = "label_MainWindow_SearchProduct";
+            this.label_MainWindow_SearchProduct.Size = new System.Drawing.Size(369, 23);
+            this.label_MainWindow_SearchProduct.TabIndex = 10;
+            this.label_MainWindow_SearchProduct.Text = "Введите артикул либо наименование товара";
+            // 
+            // button_MainWindow_
+            // 
+            this.button_MainWindow_.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_MainWindow_.Location = new System.Drawing.Point(240, 115);
+            this.button_MainWindow_.Name = "button_MainWindow_";
+            this.button_MainWindow_.Size = new System.Drawing.Size(94, 29);
+            this.button_MainWindow_.TabIndex = 11;
+            this.button_MainWindow_.Text = "Поиск";
+            this.button_MainWindow_.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 493);
+            this.Controls.Add(this.button_MainWindow_);
+            this.Controls.Add(this.label_MainWindow_SearchProduct);
+            this.Controls.Add(this.textBox_MainWndow_SearchProduct_Input);
             this.Controls.Add(this.button_MainWindow_AddSupplier);
             this.Controls.Add(this.button_MainWindow_SupplierDetail);
             this.Controls.Add(this.button1);
@@ -134,6 +168,7 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,5 +181,8 @@
         private Button button1;
         private Button button_MainWindow_SupplierDetail;
         private Button button_MainWindow_AddSupplier;
+        private TextBox textBox_MainWndow_SearchProduct_Input;
+        private Label label_MainWindow_SearchProduct;
+        private Button button_MainWindow_;
     }
 }
