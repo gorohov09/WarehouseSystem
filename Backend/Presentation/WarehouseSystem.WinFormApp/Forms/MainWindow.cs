@@ -9,16 +9,18 @@ namespace WarehouseSystem.WinFormApp.Forms
         private readonly ProductReceiveWindow _productReceiveWindow;
         private readonly ProductsIssueWindow _productsIssueWindow;
         private readonly SupplierAddWindow _supplierAddWindow;
+        private readonly SupplierDetailWindow _supplierDetailWindow;
 
         public MainWindow(IProductService productService, ProductDetailWindow productDetailWindow, 
             ProductReceiveWindow productReceiveWindow, ProductsIssueWindow productsIssueWindow,
-            SupplierAddWindow supplierAddWindow)
+            SupplierAddWindow supplierAddWindow, SupplierDetailWindow supplierDetailWindow)
         {
             _productService = productService;
             _productDetailWindow = productDetailWindow;
             _productReceiveWindow = productReceiveWindow;
             _productsIssueWindow = productsIssueWindow;
             _supplierAddWindow = supplierAddWindow;
+            _supplierDetailWindow = supplierDetailWindow;
             InitializeComponent();
         }
 
@@ -62,6 +64,16 @@ namespace WarehouseSystem.WinFormApp.Forms
         private void button_MainWindow_AddSupplier_Click(object sender, EventArgs e)
         {
             _supplierAddWindow.ShowDialog();
+        }
+
+        private void button_MainWindow_SupplierDetail_Click(object sender, EventArgs e)
+        {
+            _supplierDetailWindow.ShowDialog();
+        }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

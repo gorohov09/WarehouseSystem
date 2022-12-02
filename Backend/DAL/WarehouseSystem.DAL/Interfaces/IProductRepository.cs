@@ -15,5 +15,7 @@ namespace WarehouseSystem.DAL.Interfaces
         bool Delete<T>(T product);
 
         bool IsTakenSpace(int cellNumber, int rowNumber);
+
+        IEnumerable<Supplier> GetAllSuppliers();
     }
 }

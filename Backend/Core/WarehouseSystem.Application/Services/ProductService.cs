@@ -183,5 +183,18 @@ namespace WarehouseSystem.Application.Services
 
             return false;
         }
+
+        public IEnumerable<SupplierBO> GetSuppliers()
+        {
+            var suppliers = _productRepository.GetAllSuppliers();
+
+            return suppliers.Select(s => new SupplierBO
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Phone = s.Phone,
+                Address = s.Address,
+            });
+        }
     }
 }

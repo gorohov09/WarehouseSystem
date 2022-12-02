@@ -82,6 +82,7 @@
             this.button_Exit.TabIndex = 5;
             this.button_Exit.Text = "Выйти";
             this.button_Exit.UseVisualStyleBackColor = true;
+            this.button_Exit.Click += new System.EventHandler(this.button_Exit_Click);
             // 
             // button1
             // 
@@ -102,6 +103,7 @@
             this.button_MainWindow_SupplierDetail.TabIndex = 7;
             this.button_MainWindow_SupplierDetail.Text = "Вывести поставщиков";
             this.button_MainWindow_SupplierDetail.UseVisualStyleBackColor = true;
+            this.button_MainWindow_SupplierDetail.Click += new System.EventHandler(this.button_MainWindow_SupplierDetail_Click);
             // 
             // button_MainWindow_AddSupplier
             // 

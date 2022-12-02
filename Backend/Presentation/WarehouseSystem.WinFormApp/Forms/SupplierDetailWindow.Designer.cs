@@ -52,6 +52,7 @@
             this.MaximizeBox = false;
             this.Name = "SupplierDetailWindow";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.SupplierDetailWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SupplierDetail)).EndInit();
             this.ResumeLayout(false);
 

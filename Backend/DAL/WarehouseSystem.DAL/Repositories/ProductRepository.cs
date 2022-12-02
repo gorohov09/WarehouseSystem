@@ -59,5 +59,10 @@ namespace WarehouseSystem.DAL.Repositories
         {
             return _context.ProductExemplars.Any(ex => ex.CellNumber == cellNumber && ex.RowNumber == rowNumber);
         }
+
+        public IEnumerable<Supplier> GetAllSuppliers()
+        {
+            return _context.Suppliers.ToList();
+        }
     }
 }
