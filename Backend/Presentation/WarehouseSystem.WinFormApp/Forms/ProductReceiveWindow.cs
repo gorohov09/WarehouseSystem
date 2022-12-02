@@ -23,6 +23,18 @@ namespace WarehouseSystem.WinFormApp.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox_ProductReceive_Name_Input.Text)
+                || string.IsNullOrEmpty(textBox_ProductReceive_PriceProd_Input.Text)
+                || string.IsNullOrEmpty(textBox_ProductReceive_NumbOfCopies_Input.Text)
+                || string.IsNullOrEmpty(textBox_ProductReceive_VendorNumber_Input.Text)
+                || string.IsNullOrEmpty(textBox_ProductReceive_CityProd_Input.Text)
+                || string.IsNullOrEmpty(textBox_ProductReceive_DateProd_Input.Text))
+            {
+                MessageBox.Show("Введи все поля");
+                return;
+            }
+
+
             var name = textBox_ProductReceive_Name_Input.Text;
             var price = decimal.Parse(textBox_ProductReceive_PriceProd_Input.Text);
             var count = int.Parse(textBox_ProductReceive_NumbOfCopies_Input.Text);
@@ -30,12 +42,9 @@ namespace WarehouseSystem.WinFormApp.Forms
             var city = textBox_ProductReceive_CityProd_Input.Text;
             var date = textBox_ProductReceive_DateProd_Input.Text;
 
-            //var buttons = this.Controls.OfType<RadioButton>()
-            //               .FirstOrDefault(n => n.Checked);
+            var isCertificate = radioButton_ProductReceive_IsCertificatePresent_True.Checked;
 
-            //var isCertificate = buttons.Name;
-
-            var result = _productService.AddProduct(name, city, date, count, price, numberSupplier, false);
+            var result = _productService.AddProduct(name, city, date, count, price, numberSupplier, isCertificate);
 
             if (result)
                 MessageBox.Show("Товар успешно получен!");
