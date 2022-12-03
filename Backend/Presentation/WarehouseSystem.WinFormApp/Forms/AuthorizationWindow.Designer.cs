@@ -96,13 +96,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 342);
-            this.ControlBox = false;
             this.Controls.Add(this.button_EnterAuthorization);
             this.Controls.Add(this.label_Authorization);
             this.Controls.Add(this.label_InputPassword);
             this.Controls.Add(this.label_InputLogin);
             this.Controls.Add(this.textBox_InputPassword);
             this.Controls.Add(this.textBox_InputLogin);
+            this.MaximizeBox = false;
             this.Name = "AuthorizationWindow";
             this.ShowIcon = false;
             this.ResumeLayout(false);

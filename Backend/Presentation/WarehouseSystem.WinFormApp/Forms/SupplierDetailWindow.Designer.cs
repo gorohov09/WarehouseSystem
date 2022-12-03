@@ -44,14 +44,14 @@
             this.dataGridView_SupplierDetail.Name = "dataGridView_SupplierDetail";
             this.dataGridView_SupplierDetail.RowHeadersWidth = 51;
             this.dataGridView_SupplierDetail.RowTemplate.Height = 29;
-            this.dataGridView_SupplierDetail.Size = new System.Drawing.Size(471, 255);
+            this.dataGridView_SupplierDetail.Size = new System.Drawing.Size(561, 326);
             this.dataGridView_SupplierDetail.TabIndex = 0;
             // 
             // SupplierDetailWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 279);
+            this.ClientSize = new System.Drawing.Size(585, 350);
             this.Controls.Add(this.dataGridView_SupplierDetail);
             this.MaximizeBox = false;
             this.Name = "SupplierDetailWindow";
