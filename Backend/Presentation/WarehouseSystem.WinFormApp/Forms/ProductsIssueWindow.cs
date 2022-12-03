@@ -34,8 +34,29 @@ namespace WarehouseSystem.WinFormApp.Forms
                 return;
             }
 
-            var productSKU = int.Parse(textBox_InputProductSKU.Text);
-            var counyProductExamplar = int.Parse(textBox_InputProductsExemplarsCount.Text);
+            int productSKU;
+            int counyProductExamplar;
+
+            try
+            {
+                productSKU = int.Parse(textBox_InputProductSKU.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введите в поле Артикул - число");
+                return;
+            }
+
+            try
+            {
+                counyProductExamplar = int.Parse(textBox_InputProductsExemplarsCount.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введите в поле Колличество товара - число");
+                return;
+            }
+
             var result = _productService.IssueProduct(productSKU, counyProductExamplar);
 
             if (result)

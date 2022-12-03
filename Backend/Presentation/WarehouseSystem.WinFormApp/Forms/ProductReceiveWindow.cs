@@ -36,9 +36,40 @@ namespace WarehouseSystem.WinFormApp.Forms
 
 
             var name = textBox_ProductReceive_Name_Input.Text;
-            var price = decimal.Parse(textBox_ProductReceive_PriceProd_Input.Text);
-            var count = int.Parse(textBox_ProductReceive_NumbOfCopies_Input.Text);
-            var numberSupplier = int.Parse(textBox_ProductReceive_VendorNumber_Input.Text);
+            decimal price;
+            try
+            {
+                price = decimal.Parse(textBox_ProductReceive_PriceProd_Input.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введите в поле Цена - число");
+                return;
+            }
+
+            int count;
+            int numberSupplier;
+
+            try
+            {
+                count = int.Parse(textBox_ProductReceive_NumbOfCopies_Input.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введите в поле Колличество товара - число");
+                return;
+            }
+
+            try
+            {
+                numberSupplier = int.Parse(textBox_ProductReceive_VendorNumber_Input.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введите в поле Номер поставщика - число");
+                return;
+            }
+
             var city = textBox_ProductReceive_CityProd_Input.Text;
             var date = textBox_ProductReceive_DateProd_Input.Text;
 
