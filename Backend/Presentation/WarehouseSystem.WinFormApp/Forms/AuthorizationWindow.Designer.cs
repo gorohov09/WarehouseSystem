@@ -34,6 +34,7 @@
             this.label_InputPassword = new System.Windows.Forms.Label();
             this.label_Authorization = new System.Windows.Forms.Label();
             this.button_EnterAuthorization = new System.Windows.Forms.Button();
+            this.buttonRegistration = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_InputLogin
@@ -91,11 +92,23 @@
             this.button_EnterAuthorization.UseVisualStyleBackColor = true;
             this.button_EnterAuthorization.Click += new System.EventHandler(this.button_EnterAuthorization_Click);
             // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonRegistration.Location = new System.Drawing.Point(178, 275);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(125, 29);
+            this.buttonRegistration.TabIndex = 6;
+            this.buttonRegistration.Text = "Регистрация";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            // 
             // AuthorizationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 342);
+            this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.button_EnterAuthorization);
             this.Controls.Add(this.label_Authorization);
             this.Controls.Add(this.label_InputPassword);
@@ -118,5 +131,6 @@
         private Label label_InputPassword;
         private Label label_Authorization;
         private Button button_EnterAuthorization;
+        private Button buttonRegistration;
     }
 }

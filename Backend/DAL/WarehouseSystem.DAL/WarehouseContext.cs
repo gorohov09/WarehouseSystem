@@ -16,6 +16,8 @@ namespace WarehouseSystem.DAL
 
         public DbSet<Supplier> Suppliers { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<BooksAuthorsEntity>().HasKey(u => new { u.AuthorID, u.ISBN });
@@ -40,6 +42,11 @@ namespace WarehouseSystem.DAL
                 j.ToTable("Deliveries");
             });
 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.LogTo(Console.WriteLine);
         }
     }
 }
