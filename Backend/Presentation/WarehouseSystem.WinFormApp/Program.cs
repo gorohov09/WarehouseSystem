@@ -55,9 +55,11 @@ namespace WarehouseSystem.WinFormApp
 
                     //Repositories
                     services.AddScoped<IProductRepository, ProductRepository>();
+                    services.AddScoped<IAccountRepository, AccountRepository>();
 
                     //Services
                     services.AddScoped<IProductService, ProductService>();
+                    services.AddScoped<IUserService, UserService>();
 
                     services.AddTransient<MainWindow>();
                     services.AddTransient<ProductDetailWindow>();
@@ -66,6 +68,7 @@ namespace WarehouseSystem.WinFormApp
                     services.AddTransient<AuthorizationWindow>();
                     services.AddTransient<SupplierAddWindow>();
                     services.AddTransient<SupplierDetailWindow>();
+                    services.AddTransient<RegistrationWindow>();
                 });
         }
     }
