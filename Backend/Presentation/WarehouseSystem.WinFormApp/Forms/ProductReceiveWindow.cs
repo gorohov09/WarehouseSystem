@@ -75,7 +75,16 @@ namespace WarehouseSystem.WinFormApp.Forms
 
             var isCertificate = radioButton_ProductReceive_IsCertificatePresent_True.Checked;
 
-            var result = _productService.AddProduct(name, city, date, count, price, numberSupplier, isCertificate);
+            bool result;
+            try
+            {
+                result = _productService.AddProduct(name, city, date, count, price, numberSupplier, isCertificate);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка!");
+                return;
+            }
 
             if (result)
                 MessageBox.Show("Товар успешно получен!");
