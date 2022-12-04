@@ -26,6 +26,12 @@ namespace WarehouseSystem.WinFormApp.Forms
             var login = textBox_InputLoginReg.Text;
             var password = textBox_InputPasswordReg.Text;
 
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Введите все данные");
+                return;
+            }
+
             var result = _userService.Registrate(login, password);
 
             if (result)
